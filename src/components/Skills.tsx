@@ -56,91 +56,95 @@ const Skills = () => {
   }, []);
 
   return (
-    <section id="skills" ref={sectionRef} className="py-20 bg-slate-800/30">
-      <div className="container mx-auto px-6">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-            Skills & Expertise
-          </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-purple-400 to-pink-400 mx-auto rounded-full"></div>
-          <p className="text-xl text-gray-300 mt-6 max-w-3xl mx-auto">
-            A comprehensive overview of my technical skills and proficiency levels
-          </p>
-        </div>
-
-        <div className="grid lg:grid-cols-3 gap-8">
-          {skillCategories.map((category, categoryIndex) => (
-            <div
-              key={categoryIndex}
-              className="bg-slate-900/50 p-8 rounded-xl border border-gray-700 hover:border-purple-400/50 transition-all duration-300 hover:transform hover:scale-105"
-            >
-              <h3 className="text-2xl font-bold text-white mb-8 text-center">
-                {category.title}
-              </h3>
-              
-              <div className="space-y-6">
-                {category.skills.map((skill, skillIndex) => (
-                  <div key={skillIndex} className="space-y-2">
-                    <div className="flex justify-between items-center">
-                      <span className="text-gray-300 font-medium">{skill.name}</span>
-                      <span className="text-purple-400 font-semibold">{skill.level}%</span>
-                    </div>
-                    
-                    <div className="relative h-3 bg-gray-700 rounded-full overflow-hidden">
-                      <div
-                        className={`absolute top-0 left-0 h-full bg-gradient-to-r ${skill.color} rounded-full transition-all duration-1000 ease-out`}
-                        style={{
-                          width: isVisible ? `${skill.level}%` : '0%',
-                          transitionDelay: `${categoryIndex * 200 + skillIndex * 100}ms`
-                        }}
-                      ></div>
-                      
-                      {/* Shimmer effect */}
-                      <div
-                        className="absolute top-0 left-0 h-full w-8 bg-gradient-to-r from-transparent via-white/20 to-transparent animate-pulse"
-                        style={{
-                          animation: isVisible ? 'shimmer 2s infinite' : 'none',
-                          animationDelay: `${categoryIndex * 200 + skillIndex * 100}ms`
-                        }}
-                      ></div>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          ))}
-        </div>
-
-        {/* Tech Stack Cloud */}
-        <div className="mt-16 text-center">
-          <h3 className="text-2xl font-bold text-white mb-8">Technologies I Work With</h3>
-          <div className="flex flex-wrap justify-center gap-4 max-w-4xl mx-auto">
-            {[
-              'React', 'Node.js', 'TypeScript', 'Python', 'MongoDB', 'PostgreSQL',
-              'Docker', 'AWS', 'Git', 'Figma', 'Tailwind', 'Express.js',
-              'Next.js', 'GraphQL', 'Redis', 'Jest'
-            ].map((tech, index) => (
-              <span
-                key={index}
-                className="px-4 py-2 bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-400/30 rounded-full text-purple-300 hover:from-purple-500/30 hover:to-pink-500/30 hover:border-purple-400/50 transition-all duration-300 hover:scale-110 cursor-default"
-                style={{
-                  animationDelay: `${index * 100}ms`
-                }}
-              >
-                {tech}
-              </span>
-            ))}
-          </div>
-        </div>
-      </div>
-
-      <style jsx>{`
+    <>
+      <style>{`
         @keyframes shimmer {
           0% { transform: translateX(-100%); }
           100% { transform: translateX(400%); }
         }
+        .shimmer-animation {
+          animation: shimmer 2s infinite;
+        }
       `}</style>
-    </section>
+      
+      <section id="skills" ref={sectionRef} className="py-20 bg-slate-800/30">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+              Skills & Expertise
+            </h2>
+            <div className="w-24 h-1 bg-gradient-to-r from-purple-400 to-pink-400 mx-auto rounded-full"></div>
+            <p className="text-xl text-gray-300 mt-6 max-w-3xl mx-auto">
+              A comprehensive overview of my technical skills and proficiency levels
+            </p>
+          </div>
+
+          <div className="grid lg:grid-cols-3 gap-8">
+            {skillCategories.map((category, categoryIndex) => (
+              <div
+                key={categoryIndex}
+                className="bg-slate-900/50 p-8 rounded-xl border border-gray-700 hover:border-purple-400/50 transition-all duration-300 hover:transform hover:scale-105"
+              >
+                <h3 className="text-2xl font-bold text-white mb-8 text-center">
+                  {category.title}
+                </h3>
+                
+                <div className="space-y-6">
+                  {category.skills.map((skill, skillIndex) => (
+                    <div key={skillIndex} className="space-y-2">
+                      <div className="flex justify-between items-center">
+                        <span className="text-gray-300 font-medium">{skill.name}</span>
+                        <span className="text-purple-400 font-semibold">{skill.level}%</span>
+                      </div>
+                      
+                      <div className="relative h-3 bg-gray-700 rounded-full overflow-hidden">
+                        <div
+                          className={`absolute top-0 left-0 h-full bg-gradient-to-r ${skill.color} rounded-full transition-all duration-1000 ease-out`}
+                          style={{
+                            width: isVisible ? `${skill.level}%` : '0%',
+                            transitionDelay: `${categoryIndex * 200 + skillIndex * 100}ms`
+                          }}
+                        ></div>
+                        
+                        {/* Shimmer effect */}
+                        <div
+                          className={`absolute top-0 left-0 h-full w-8 bg-gradient-to-r from-transparent via-white/20 to-transparent ${isVisible ? 'shimmer-animation' : ''}`}
+                          style={{
+                            animationDelay: `${categoryIndex * 200 + skillIndex * 100}ms`
+                          }}
+                        ></div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Tech Stack Cloud */}
+          <div className="mt-16 text-center">
+            <h3 className="text-2xl font-bold text-white mb-8">Technologies I Work With</h3>
+            <div className="flex flex-wrap justify-center gap-4 max-w-4xl mx-auto">
+              {[
+                'React', 'Node.js', 'TypeScript', 'Python', 'MongoDB', 'PostgreSQL',
+                'Docker', 'AWS', 'Git', 'Figma', 'Tailwind', 'Express.js',
+                'Next.js', 'GraphQL', 'Redis', 'Jest'
+              ].map((tech, index) => (
+                <span
+                  key={index}
+                  className="px-4 py-2 bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-400/30 rounded-full text-purple-300 hover:from-purple-500/30 hover:to-pink-500/30 hover:border-purple-400/50 transition-all duration-300 hover:scale-110 cursor-default"
+                  style={{
+                    animationDelay: `${index * 100}ms`
+                  }}
+                >
+                  {tech}
+                </span>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+    </>
   );
 };
 
