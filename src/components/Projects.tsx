@@ -19,10 +19,10 @@ const Projects = () => {
     },
     {
       id: 2,
-      title: "Sentiment Analysis & Hateful Sentiment Detection",
-      description: "Implemented machine learning model for analyzing sentiments on Twitter data using LSTM and BERT for sentiment classification. Focused on detecting hateful speech with deep learning techniques.",
+      title: "Sentiment Analysis & Hateful Content Detection",
+      description: "Implemented machine learning model for analyzing sentiments on Twitter data using LSTM and BERT for sentiment classification. Advanced review ranking system for sentiment analysis.",
       image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=250&fit=crop",
-      category: "Machine Learning",
+      category: "Data Analytics",
       tech: ["Python", "LSTM", "BERT", "NLP", "Deep Learning"],
       github: "https://github.com/kirubaharan181",
       demo: null,
@@ -33,7 +33,7 @@ const Projects = () => {
       title: "Optimized Sentiment Analysis of TV Reviews Using AdamW",
       description: "Developed an advanced sentiment analysis model using deep learning techniques. Utilized AdamW optimizer for improved accuracy and performance with transformer-based models.",
       image: "https://images.unsplash.com/photo-1518186285589-2f7649de83e0?w=400&h=250&fit=crop",
-      category: "Machine Learning",
+      category: "Data Analytics",
       tech: ["Python", "AdamW", "BERT", "RoBERTa", "DistilBERT"],
       github: "https://github.com/kirubaharan181",
       demo: null,
@@ -52,7 +52,7 @@ const Projects = () => {
     }
   ];
 
-  const categories = ['All', 'Machine Learning', 'Web Development', 'Data Science'];
+  const categories = ['All', 'Data Analytics', 'Web Development', 'Machine Learning'];
 
   const filteredProjects = activeFilter === 'All' 
     ? projects 
@@ -67,7 +67,7 @@ const Projects = () => {
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-purple-400 to-pink-400 mx-auto rounded-full"></div>
           <p className="text-xl text-gray-300 mt-6 max-w-3xl mx-auto">
-            Showcasing my passion for machine learning, data science, and creating innovative solutions that solve real-world problems
+            Showcasing my passion for data analytics, machine learning, and creating innovative solutions that solve real-world problems
           </p>
         </div>
 
