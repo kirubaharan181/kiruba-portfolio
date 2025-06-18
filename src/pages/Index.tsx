@@ -11,6 +11,7 @@ import Contact from '../components/Contact';
 import Footer from '../components/Footer';
 import ScrollToTop from '../components/ScrollToTop';
 import Preloader from '../components/Preloader';
+import QRCodeComponent from '../components/QRCode';
 
 const Index = () => {
   const [currentTheme, setCurrentTheme] = useState('purple');
@@ -18,15 +19,23 @@ const Index = () => {
   useEffect(() => {
     const handleThemeChange = () => {
       const bodyClass = document.body.className;
-      const themeMatch = bodyClass.match(/theme-(\w+)/);
-      if (themeMatch) {
-        setCurrentTheme(themeMatch[1]);
+      if (bodyClass.includes('theme-blue')) {
+        setCurrentTheme('blue');
+      } else if (bodyClass.includes('theme-green')) {
+        setCurrentTheme('green');
+      } else if (bodyClass.includes('theme-orange')) {
+        setCurrentTheme('orange');
+      } else {
+        setCurrentTheme('purple');
       }
     };
 
     // Listen for theme changes
     const observer = new MutationObserver(handleThemeChange);
     observer.observe(document.body, { attributes: true, attributeFilter: ['class'] });
+
+    // Set initial theme
+    handleThemeChange();
 
     return () => observer.disconnect();
   }, []);
@@ -57,6 +66,7 @@ const Index = () => {
       <Contact />
       <Footer />
       <ScrollToTop />
+      <QRCodeComponent />
     </div>
   );
 };

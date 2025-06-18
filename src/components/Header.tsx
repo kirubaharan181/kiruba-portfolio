@@ -1,10 +1,18 @@
 
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Github, Linkedin, Mail } from 'lucide-react';
+import { Menu, X, Github, Linkedin, Mail, Palette } from 'lucide-react';
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('home');
+  const [currentTheme, setCurrentTheme] = useState(0);
+
+  const themes = [
+    { name: "Purple", class: "theme-purple" },
+    { name: "Blue", class: "theme-blue" },
+    { name: "Green", class: "theme-green" },
+    { name: "Orange", class: "theme-orange" }
+  ];
 
   useEffect(() => {
     const handleScroll = () => {
@@ -35,6 +43,12 @@ const Header = () => {
       element.scrollIntoView({ behavior: 'smooth' });
     }
     setIsOpen(false);
+  };
+
+  const changeTheme = () => {
+    const newTheme = (currentTheme + 1) % themes.length;
+    setCurrentTheme(newTheme);
+    document.body.className = themes[newTheme].class;
   };
 
   const navItems = [
@@ -76,7 +90,7 @@ const Header = () => {
             ))}
           </div>
 
-          {/* Social Links */}
+          {/* Social Links & Theme Button */}
           <div className="hidden md:flex items-center space-x-4">
             <a href="https://github.com" target="_blank" rel="noopener noreferrer" 
                className="text-gray-300 hover:text-purple-400 transition-colors duration-300">
@@ -86,10 +100,19 @@ const Header = () => {
                className="text-gray-300 hover:text-purple-400 transition-colors duration-300">
               <Linkedin size={20} />
             </a>
-            <a href="mailto:contact@example.com"
+            <a href="mailto:kirubakrishkk@gmail.com"
                className="text-gray-300 hover:text-purple-400 transition-colors duration-300">
               <Mail size={20} />
             </a>
+            
+            {/* Theme Change Button */}
+            <button
+              onClick={changeTheme}
+              className="w-10 h-10 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center text-white hover:scale-110 transition-all duration-300 shadow-lg hover:shadow-purple-500/25"
+              aria-label="Change Theme"
+            >
+              <Palette size={18} />
+            </button>
           </div>
 
           {/* Mobile Menu Button */}
@@ -118,19 +141,28 @@ const Header = () => {
                   {item.label}
                 </button>
               ))}
-              <div className="flex items-center space-x-4 px-3 pt-4 border-t border-gray-700">
-                <a href="https://github.com" target="_blank" rel="noopener noreferrer"
-                   className="text-gray-300 hover:text-purple-400 transition-colors duration-300">
-                  <Github size={20} />
-                </a>
-                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer"
-                   className="text-gray-300 hover:text-purple-400 transition-colors duration-300">
-                  <Linkedin size={20} />
-                </a>
-                <a href="mailto:contact@example.com"
-                   className="text-gray-300 hover:text-purple-400 transition-colors duration-300">
-                  <Mail size={20} />
-                </a>
+              <div className="flex items-center justify-between px-3 pt-4 border-t border-gray-700">
+                <div className="flex items-center space-x-4">
+                  <a href="https://github.com" target="_blank" rel="noopener noreferrer"
+                     className="text-gray-300 hover:text-purple-400 transition-colors duration-300">
+                    <Github size={20} />
+                  </a>
+                  <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer"
+                     className="text-gray-300 hover:text-purple-400 transition-colors duration-300">
+                    <Linkedin size={20} />
+                  </a>
+                  <a href="mailto:kirubakrishkk@gmail.com"
+                     className="text-gray-300 hover:text-purple-400 transition-colors duration-300">
+                    <Mail size={20} />
+                  </a>
+                </div>
+                <button
+                  onClick={changeTheme}
+                  className="w-10 h-10 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center text-white hover:scale-110 transition-all duration-300"
+                  aria-label="Change Theme"
+                >
+                  <Palette size={18} />
+                </button>
               </div>
             </div>
           </div>
