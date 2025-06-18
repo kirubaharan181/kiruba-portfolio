@@ -8,8 +8,19 @@ const Projects = () => {
   const projects = [
     {
       id: 1,
+      title: "TripTale - Travel Guidance App",
+      description: "A comprehensive travel guidance application built with React and MERN stack. Features travel planning, destination recommendations, and user-friendly interface for seamless travel experiences.",
+      image: "https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=400&h=250&fit=crop",
+      category: "Web Development",
+      tech: ["React", "Node.js", "MongoDB", "Express.js", "MERN Stack"],
+      github: "https://github.com/kirubaharan181",
+      demo: null,
+      year: "2024"
+    },
+    {
+      id: 2,
       title: "Sentiment Analysis & Hateful Sentiment Detection",
-      description: "Implemented a machine learning model for analyzing sentiments on Twitter data using LSTM and BERT for sentiment classification. Focused on detecting hateful speech with deep learning techniques.",
+      description: "Implemented machine learning model for analyzing sentiments on Twitter data using LSTM and BERT for sentiment classification. Focused on detecting hateful speech with deep learning techniques.",
       image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=250&fit=crop",
       category: "Machine Learning",
       tech: ["Python", "LSTM", "BERT", "NLP", "Deep Learning"],
@@ -18,7 +29,7 @@ const Projects = () => {
       year: "2025"
     },
     {
-      id: 2,
+      id: 3,
       title: "Optimized Sentiment Analysis of TV Reviews Using AdamW",
       description: "Developed an advanced sentiment analysis model using deep learning techniques. Utilized AdamW optimizer for improved accuracy and performance with transformer-based models.",
       image: "https://images.unsplash.com/photo-1518186285589-2f7649de83e0?w=400&h=250&fit=crop",
@@ -29,7 +40,7 @@ const Projects = () => {
       year: "2024"
     },
     {
-      id: 3,
+      id: 4,
       title: "Wool Monitoring Application",
       description: "Built a Java-based tracking system for wool from farm to fabric. Integrated SQLPlus database for inventory and order management with an E-commerce platform.",
       image: "https://images.unsplash.com/photo-1586953208448-b95a79798f07?w=400&h=250&fit=crop",

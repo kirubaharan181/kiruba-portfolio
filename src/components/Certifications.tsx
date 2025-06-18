@@ -8,6 +8,16 @@ const Certifications = () => {
   const certifications = [
     {
       id: 1,
+      title: "Microsoft Power BI Data Analyst",
+      issuer: "Microsoft",
+      date: "2024",
+      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=300&h=200&fit=crop",
+      description: "Comprehensive Power BI certification covering data visualization, dashboard creation, and business intelligence analytics.",
+      skills: ["Power BI", "Data Visualization", "DAX", "Power Query", "Business Intelligence"],
+      credentialUrl: "https://microsoft.com"
+    },
+    {
+      id: 2,
       title: "Infosys Certification in Java Programming",
       issuer: "Infosys",
       date: "2024",
@@ -17,7 +27,7 @@ const Certifications = () => {
       credentialUrl: "https://infosys.com"
     },
     {
-      id: 2,
+      id: 3,
       title: "Joy of Computing in Python",
       issuer: "Infosys",
       date: "2024",
@@ -27,7 +37,7 @@ const Certifications = () => {
       credentialUrl: "https://infosys.com"
     },
     {
-      id: 3,
+      id: 4,
       title: "Industrial 4.0 and Internet of Things",
       issuer: "Infosys",
       date: "2023",
@@ -37,7 +47,7 @@ const Certifications = () => {
       credentialUrl: "https://infosys.com"
     },
     {
-      id: 4,
+      id: 5,
       title: "Infosys Certification in SQL",
       issuer: "Infosys",
       date: "2023",
@@ -47,7 +57,7 @@ const Certifications = () => {
       credentialUrl: "https://infosys.com"
     },
     {
-      id: 5,
+      id: 6,
       title: "Infosys Certification in Agile Methodology",
       issuer: "Infosys",
       date: "2023",
@@ -67,7 +77,7 @@ const Certifications = () => {
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-purple-400 to-pink-400 mx-auto rounded-full"></div>
           <p className="text-xl text-gray-300 mt-6 max-w-3xl mx-auto">
-            Continuous learning and professional development through industry-recognized certifications from Infosys
+            Continuous learning and professional development through industry-recognized certifications from Microsoft and Infosys
           </p>
         </div>
 
@@ -145,16 +155,16 @@ const Certifications = () => {
         {/* Statistics */}
         <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8">
           <div className="text-center">
-            <div className="text-3xl font-bold text-purple-400 mb-2">5+</div>
+            <div className="text-3xl font-bold text-purple-400 mb-2">6+</div>
             <div className="text-gray-300">Certifications</div>
           </div>
           <div className="text-center">
-            <div className="text-3xl font-bold text-pink-400 mb-2">300+</div>
+            <div className="text-3xl font-bold text-pink-400 mb-2">350+</div>
             <div className="text-gray-300">Study Hours</div>
           </div>
           <div className="text-center">
-            <div className="text-3xl font-bold text-blue-400 mb-2">1</div>
-            <div className="text-gray-300">Platform</div>
+            <div className="text-3xl font-bold text-blue-400 mb-2">2</div>
+            <div className="text-gray-300">Platforms</div>
           </div>
           <div className="text-center">
             <div className="text-3xl font-bold text-green-400 mb-2">98%</div>

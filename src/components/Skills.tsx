@@ -29,6 +29,7 @@ const Skills = () => {
     {
       title: "Tools & Technologies",
       skills: [
+        { name: "Power BI", level: 75, color: "from-yellow-400 to-orange-500" },
         { name: "Data Structures", level: 85, color: "from-gray-400 to-gray-600" },
         { name: "Algorithms", level: 80, color: "from-violet-400 to-violet-600" },
         { name: "HTML/CSS", level: 85, color: "from-orange-400 to-red-500" },
@@ -128,7 +129,8 @@ const Skills = () => {
               {[
                 'Java', 'Python', 'SQL', 'Machine Learning', 'Deep Learning', 'NLP',
                 'LSTM', 'BERT', 'Data Analysis', 'AdamW', 'Sentiment Analysis',
-                'HTML/CSS', 'JavaScript', 'Agile', 'SQLPlus', 'Algorithms'
+                'HTML/CSS', 'JavaScript', 'Agile', 'SQLPlus', 'Algorithms', 'Power BI',
+                'React', 'MERN Stack', 'MongoDB', 'Express.js'
               ].map((tech, index) => (
                 <span
                   key={index}
