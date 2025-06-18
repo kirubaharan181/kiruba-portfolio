@@ -7,61 +7,61 @@ const About = () => {
   const [activeTab, setActiveTab] = useState('bio');
 
   const funFacts = [
-    { icon: Code, text: "Favorite Language: JavaScript", color: "text-yellow-400", detail: "3+ years experience" },
-    { icon: Coffee, text: "Coffee Cups per Day: 4", color: "text-amber-400", detail: "Fuel for coding sessions" },
-    { icon: Book, text: "Books Read This Year: 12", color: "text-blue-400", detail: "Tech & personal development" },
-    { icon: Heart, text: "Passion: Building Cool Stuff", color: "text-red-400", detail: "From idea to deployment" }
+    { icon: Code, text: "Favorite Language: Java", color: "text-yellow-400", detail: "3+ years experience" },
+    { icon: Coffee, text: "Coffee Cups per Day: 3", color: "text-amber-400", detail: "Fuel for coding sessions" },
+    { icon: Book, text: "Research Focus: ML & NLP", color: "text-blue-400", detail: "Sentiment Analysis Expert" },
+    { icon: Heart, text: "Passion: Data-Driven Solutions", color: "text-red-400", detail: "From data to insights" }
   ];
 
   const timeline = [
     {
-      year: "2024",
-      title: "Final Year IT Student",
-      description: "Focusing on full-stack development and preparing for industry transition",
+      year: "2026",
+      title: "B.Tech Graduate",
+      description: "Completing Information Technology degree with focus on ML and Data Analytics",
       color: "border-purple-400",
-      details: ["Advanced web development", "Capstone project", "Industry internship"],
+      details: ["GPA: 7.5/10", "Major Project on Sentiment Analysis", "Industry ready skills"],
       icon: Award
     },
     {
-      year: "2023",
-      title: "Software Intern",
-      description: "Gained hands-on experience in React and Node.js development",
+      year: "2024",
+      title: "Research & Development",
+      description: "Working on Sentiment Analysis and Deep Learning Models for Twitter data",
       color: "border-pink-400",
-      details: ["Built 3 web applications", "Collaborated with senior developers", "Agile methodology"],
+      details: ["AdamW optimizer research", "BERT model implementation", "NLP techniques mastery"],
       icon: Code
     },
     {
-      year: "2022",
-      title: "Started Web Development",
-      description: "Discovered passion for creating interactive web applications",
+      year: "2023",
+      title: "Wool Monitoring Application",
+      description: "Developed E-commerce platform with Java-based tracking system",
       color: "border-blue-400",
-      details: ["First React project", "Learned responsive design", "Open source contributions"],
+      details: ["SQLPlus database integration", "Inventory management", "Full-stack development"],
       icon: Heart
     },
     {
-      year: "2021",
-      title: "Began IT Studies",
-      description: "Started journey in Information Technology at University",
+      year: "2022",
+      title: "Started B.Tech",
+      description: "Began Information Technology journey at Mepco Schlenk Engineering College",
       color: "border-green-400",
-      details: ["Programming fundamentals", "Database design", "Software engineering"],
+      details: ["Programming fundamentals", "Data structures", "Algorithm design"],
       icon: Calendar
     }
   ];
 
   const personalInfo = {
-    location: "San Francisco, CA",
-    age: "22",
-    education: "Bachelor's in Information Technology",
-    experience: "2+ years",
-    languages: ["English", "Spanish", "Python", "JavaScript"],
-    hobbies: ["Photography", "Gaming", "Hiking", "Tech Blogging"]
+    location: "Pudhumarai, Sankarankovil, Tenkasi",
+    age: "21",
+    education: "B.Tech Information Technology (2022-2026)",
+    experience: "4+ years learning",
+    languages: ["English", "German (basic)", "Hindi (basic)", "Tamil"],
+    hobbies: ["Kabaddi", "Data Analysis", "Machine Learning", "Problem Solving"]
   };
 
   const achievements = [
-    { title: "Dean's List", year: "2023", description: "Academic Excellence Award" },
-    { title: "Hackathon Winner", year: "2023", description: "Best Web App - University Hackathon" },
-    { title: "Open Source Contributor", year: "2022", description: "500+ contributions on GitHub" },
-    { title: "Tech Blog Writer", year: "2022", description: "10K+ monthly readers" }
+    { title: "National Level Technical Symposium", year: "2024", description: "Presented Sentiment Analysis research project" },
+    { title: "Infosys Certifications", year: "2023-2024", description: "Java, Python, SQL, Agile Methodology" },
+    { title: "High Academic Performance", year: "2022", description: "Higher Secondary: 92%, SSLC: 89%" },
+    { title: "District Level Kabaddi", year: "2023", description: "Participated showcasing teamwork and strategy" }
   ];
 
   return (
@@ -79,7 +79,7 @@ const About = () => {
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-purple-400 to-pink-400 mx-auto rounded-full"></div>
           <p className="text-gray-400 mt-4 max-w-2xl mx-auto">
-            Discover more about my journey, passions, and what drives me as a developer
+            Discover more about my journey, passions, and what drives me as a developer and researcher
           </p>
         </div>
 
@@ -92,8 +92,8 @@ const About = () => {
                 onClick={() => setIsProfileModalOpen(true)}
               >
                 <img
-                  src="https://images.unsplash.com/photo-1581090464777-f3220bbe1b8b?w=400&h=400&fit=crop&crop=face"
-                  alt="Alex Johnson"
+                  src="/lovable-uploads/20c6aac7-f7dc-41ba-ba2e-010ee5449997.png"
+                  alt="Kirubaharan"
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-purple-900/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
@@ -106,7 +106,7 @@ const About = () => {
               <div className="flex justify-center gap-2 mt-4">
                 <div className="bg-slate-800/50 px-3 py-1 rounded-full text-sm text-gray-300 border border-gray-700">
                   <MapPin className="w-4 h-4 inline mr-1" />
-                  {personalInfo.location}
+                  Tenkasi, Tamil Nadu
                 </div>
                 <div className="bg-slate-800/50 px-3 py-1 rounded-full text-sm text-gray-300 border border-gray-700">
                   {personalInfo.age} years old
@@ -138,16 +138,15 @@ const About = () => {
               {activeTab === 'bio' && (
                 <div className="space-y-6 animate-fade-in">
                   <p className="text-lg text-gray-300 leading-relaxed">
-                    Hi there! I'm Alex, a passionate IT student with a love for creating 
-                    digital experiences that make a difference. Currently pursuing my degree 
-                    in Information Technology, I specialize in full-stack web development 
-                    and have a keen interest in emerging technologies.
+                    Hi there! I'm Kirubaharan, a passionate IT student with a strong foundation in software 
+                    development, data analytics, and machine learning. Currently pursuing my B.Tech in 
+                    Information Technology at Mepco Schlenk Engineering College, Sivakasi.
                   </p>
                   
                   <p className="text-lg text-gray-300 leading-relaxed">
-                    When I'm not coding, you'll find me exploring new frameworks, contributing 
-                    to open-source projects, or sharing knowledge with fellow developers. 
-                    My goal is to build innovative solutions that solve real-world problems.
+                    My expertise lies in sentiment analysis and hateful sentiment detection using Twitter data, 
+                    leveraging advanced deep learning models like LSTM and BERT. I'm skilled in problem-solving 
+                    and innovative thinking, always aiming to create data-driven solutions for real-world challenges.
                   </p>
                 </div>
               )}
@@ -168,7 +167,7 @@ const About = () => {
                     <div className="flex items-center text-gray-300">
                       <Target className="w-5 h-5 text-purple-400 mr-3" />
                       <span className="font-medium">Goal:</span>
-                      <span className="ml-2">Full-Stack Developer</span>
+                      <span className="ml-2">ML Engineer</span>
                     </div>
                   </div>
                   <div className="space-y-3">
@@ -183,7 +182,7 @@ const About = () => {
                       </div>
                     </div>
                     <div className="text-gray-300">
-                      <span className="font-medium text-purple-400">Hobbies:</span>
+                      <span className="font-medium text-purple-400">Interests:</span>
                       <div className="flex flex-wrap gap-2 mt-2">
                         {personalInfo.hobbies.map((hobby, index) => (
                           <span key={index} className="bg-slate-800/50 px-2 py-1 rounded text-sm border border-gray-700">
@@ -275,14 +274,14 @@ const About = () => {
             </button>
             <div className="relative overflow-hidden rounded-2xl">
               <img
-                src="https://images.unsplash.com/photo-1581090464777-f3220bbe1b8b?w=800&h=800&fit=crop&crop=face"
-                alt="Alex Johnson - Full View"
+                src="/lovable-uploads/20c6aac7-f7dc-41ba-ba2e-010ee5449997.png"
+                alt="Kirubaharan - Full View"
                 className="w-full h-auto max-h-[80vh] object-cover animate-scale-in"
               />
               <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6">
-                <h3 className="text-2xl font-bold text-white mb-2">Alex Johnson</h3>
-                <p className="text-gray-300">IT Student & Aspiring Full-Stack Developer</p>
-                <p className="text-purple-400 text-sm mt-2">📍 San Francisco, CA • 🎓 Final Year</p>
+                <h3 className="text-2xl font-bold text-white mb-2">Kirubaharan</h3>
+                <p className="text-gray-300">IT Student & Aspiring Data Scientist</p>
+                <p className="text-purple-400 text-sm mt-2">📍 Tenkasi, Tamil Nadu • 🎓 B.Tech IT (2022-2026)</p>
               </div>
             </div>
           </div>

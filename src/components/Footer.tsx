@@ -10,13 +10,13 @@ const Footer = () => {
   const socialLinks = [
     {
       icon: Github,
-      href: "https://github.com",
+      href: "https://github.com/kirubaharan181",
       label: "GitHub",
       color: "hover:text-gray-300"
     },
     {
       icon: Linkedin,
-      href: "https://linkedin.com",
+      href: "https://www.linkedin.com/in/kiruba-haran-7369a0320",
       label: "LinkedIn",
       color: "hover:text-blue-400"
     },
@@ -32,7 +32,7 @@ const Footer = () => {
   const additionalSocialLinks = [
     {
       name: "Instagram",
-      href: "https://instagram.com",
+      href: "https://instagram.com/kirubaharan",
       label: "Instagram",
       color: "hover:text-pink-400",
       svg: (
@@ -43,7 +43,7 @@ const Footer = () => {
     },
     {
       name: "X",
-      href: "https://x.com",
+      href: "https://x.com/kirubaharan",
       label: "X (Twitter)",
       color: "hover:text-gray-300",
       svg: (
@@ -54,7 +54,7 @@ const Footer = () => {
     },
     {
       name: "WhatsApp",
-      href: "https://wa.me/15551234567",
+      href: "https://wa.me/919080257155",
       label: "WhatsApp",
       color: "hover:text-green-400",
       svg: (
@@ -88,11 +88,11 @@ const Footer = () => {
           {/* Brand Section */}
           <div className="text-center md:text-left">
             <div className="text-2xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent mb-4">
-              &lt;Alex Johnson/&gt;
+              &lt;Kirubaharan/&gt;
             </div>
             <p className="text-gray-400 leading-relaxed">
-              IT Student passionate about creating innovative web solutions. 
-              Always learning, always growing.
+              IT Student passionate about machine learning, data science, and creating 
+              innovative solutions. Always learning, always growing.
             </p>
           </div>
 
@@ -159,7 +159,7 @@ const Footer = () => {
             <div className="flex items-center text-gray-400 text-sm">
               <span>© 2024 Made with</span>
               <Heart className="text-red-400 mx-1" size={16} />
-              <span>by Alex Johnson</span>
+              <span>by Kirubaharan</span>
             </div>
 
             {/* Additional Info */}

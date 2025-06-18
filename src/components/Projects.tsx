@@ -8,47 +8,40 @@ const Projects = () => {
   const projects = [
     {
       id: 1,
-      title: "E-Commerce Platform",
-      description: "Full-stack e-commerce solution with React, Node.js, and MongoDB. Features include user authentication, shopping cart, and payment integration.",
-      image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=400&h=250&fit=crop",
-      category: "Web",
-      tech: ["React", "Node.js", "MongoDB", "Stripe"],
-      github: "https://github.com",
-      demo: "https://demo.com"
+      title: "Sentiment Analysis & Hateful Sentiment Detection",
+      description: "Implemented a machine learning model for analyzing sentiments on Twitter data using LSTM and BERT for sentiment classification. Focused on detecting hateful speech with deep learning techniques.",
+      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=250&fit=crop",
+      category: "Machine Learning",
+      tech: ["Python", "LSTM", "BERT", "NLP", "Deep Learning"],
+      github: "https://github.com/kirubaharan181",
+      demo: null,
+      year: "2025"
     },
     {
       id: 2,
-      title: "Task Management App",
-      description: "A collaborative task management application with real-time updates, built using React and Firebase.",
-      image: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=400&h=250&fit=crop",
-      category: "Web",
-      tech: ["React", "Firebase", "Tailwind CSS"],
-      github: "https://github.com",
-      demo: "https://demo.com"
+      title: "Optimized Sentiment Analysis of TV Reviews Using AdamW",
+      description: "Developed an advanced sentiment analysis model using deep learning techniques. Utilized AdamW optimizer for improved accuracy and performance with transformer-based models.",
+      image: "https://images.unsplash.com/photo-1518186285589-2f7649de83e0?w=400&h=250&fit=crop",
+      category: "Machine Learning",
+      tech: ["Python", "AdamW", "BERT", "RoBERTa", "DistilBERT"],
+      github: "https://github.com/kirubaharan181",
+      demo: null,
+      year: "2024"
     },
     {
       id: 3,
-      title: "Weather Dashboard",
-      description: "Interactive weather dashboard with data visualization and location-based forecasts using OpenWeather API.",
-      image: "https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?w=400&h=250&fit=crop",
-      category: "Web",
-      tech: ["JavaScript", "Chart.js", "API Integration"],
-      github: "https://github.com",
-      demo: "https://demo.com"
-    },
-    {
-      id: 4,
-      title: "Data Analysis Tool",
-      description: "Python-based data analysis tool for processing and visualizing large datasets with interactive charts.",
-      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=250&fit=crop",
-      category: "Data Science",
-      tech: ["Python", "Pandas", "Matplotlib", "Jupyter"],
-      github: "https://github.com",
-      demo: null
+      title: "Wool Monitoring Application",
+      description: "Built a Java-based tracking system for wool from farm to fabric. Integrated SQLPlus database for inventory and order management with an E-commerce platform.",
+      image: "https://images.unsplash.com/photo-1586953208448-b95a79798f07?w=400&h=250&fit=crop",
+      category: "Web Development",
+      tech: ["Java", "SQLPlus", "Database Design", "E-commerce"],
+      github: "https://github.com/kirubaharan181",
+      demo: null,
+      year: "2023"
     }
   ];
 
-  const categories = ['All', 'Web', 'Mobile', 'Data Science'];
+  const categories = ['All', 'Machine Learning', 'Web Development', 'Data Science'];
 
   const filteredProjects = activeFilter === 'All' 
     ? projects 
@@ -63,7 +56,7 @@ const Projects = () => {
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-purple-400 to-pink-400 mx-auto rounded-full"></div>
           <p className="text-xl text-gray-300 mt-6 max-w-3xl mx-auto">
-            Showcasing my passion for creating innovative solutions and learning new technologies
+            Showcasing my passion for machine learning, data science, and creating innovative solutions that solve real-world problems
           </p>
         </div>
 
@@ -100,6 +93,9 @@ const Projects = () => {
                   className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="absolute top-3 right-3 bg-purple-500 text-white px-2 py-1 rounded-full text-xs font-semibold">
+                  {project.year}
+                </div>
               </div>
 
               {/* Project Content */}
@@ -155,7 +151,7 @@ const Projects = () => {
         {/* View More Button */}
         <div className="text-center mt-12">
           <a
-            href="https://github.com"
+            href="https://github.com/kirubaharan181"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-full font-semibold hover:from-purple-600 hover:to-pink-600 transition-all duration-300 hover:scale-105"

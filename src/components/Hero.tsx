@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect, useRef } from 'react';
 import { ArrowDown, Download, ExternalLink, Github, Linkedin, Mail, Code, Star, Zap } from 'lucide-react';
 
@@ -13,24 +12,24 @@ const Hero = () => {
   const animationRef = useRef<number>();
 
   const roles = [
-    "Aspiring Web Developer",
-    "Problem Solver", 
-    "Creative Thinker",
-    "Tech Enthusiast",
-    "Open Source Contributor",
-    "UI/UX Explorer"
+    "Aspiring IT Professional",
+    "Tech Explorer", 
+    "Data Analytics Enthusiast",
+    "Machine Learning Explorer",
+    "Software Developer",
+    "Problem Solver"
   ];
 
   const stats = [
-    { number: "50+", label: "Projects Built", color: "text-purple-400", icon: Code },
-    { number: "2+", label: "Years Learning", color: "text-pink-400", icon: Star },
-    { number: "500+", label: "GitHub Commits", color: "text-blue-400", icon: Github },
-    { number: "15+", label: "Technologies", color: "text-green-400", icon: Zap }
+    { number: "3+", label: "Major Projects", color: "text-purple-400", icon: Code },
+    { number: "4+", label: "Years Learning", color: "text-pink-400", icon: Star },
+    { number: "5+", label: "Certifications", color: "text-blue-400", icon: Github },
+    { number: "10+", label: "Technologies", color: "text-green-400", icon: Zap }
   ];
 
   const socialLinks = [
-    { icon: Github, href: "https://github.com", label: "GitHub", color: "hover:text-gray-300" },
-    { icon: Linkedin, href: "https://linkedin.com", label: "LinkedIn", color: "hover:text-blue-400" },
+    { icon: Github, href: "https://github.com/kirubaharan181", label: "GitHub", color: "hover:text-gray-300" },
+    { icon: Linkedin, href: "https://www.linkedin.com/in/kiruba-haran-7369a0320", label: "LinkedIn", color: "hover:text-blue-400" },
     { icon: Mail, href: "mailto:kirubakrishkk@gmail.com", label: "Email", color: "hover:text-purple-400" }
   ];
 
@@ -227,7 +226,7 @@ const Hero = () => {
           <div className="mb-8">
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 group relative">
               <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent hover:from-purple-300 hover:to-pink-300 transition-all duration-500 cursor-default">
-                Alex Johnson
+                Kirubaharan
               </span>
               {/* Floating sparkles */}
               <div className="absolute -top-4 -right-4 w-4 h-4 bg-yellow-400 rounded-full animate-ping opacity-75 hidden md:block"></div>
@@ -235,7 +234,7 @@ const Hero = () => {
             </h1>
             
             {/* Social Links - Better positioned with improved tooltips */}
-            <div className="flex justify-center space-x-8 mb-8">
+            <div className="flex justify-center space-x-8 mb-12">
               {socialLinks.map((social, index) => (
                 <div key={index} className="relative group">
                   <a
@@ -268,8 +267,8 @@ const Hero = () => {
           {/* Enhanced Description */}
           <div className="relative mb-8">
             <p className="text-lg md:text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed">
-              Passionate IT student crafting digital experiences with clean code and creative solutions. 
-              Always eager to learn, grow, and contribute to meaningful projects that make a difference.
+              Passionate IT professional with a strong foundation in software development, data analytics, and machine learning. 
+              Currently exploring Sentiment Analysis and Hateful Sentiment Detection using Twitter data, aiming to leverage data-driven insights for impactful solutions.
             </p>
           </div>
 
@@ -323,15 +322,15 @@ const Hero = () => {
           </div>
 
           {/* Tech Stack - Positioned higher to avoid overlap */}
-          <div className="flex justify-center space-x-8 mb-24">
+          <div className="flex justify-center space-x-8 mb-32">
             {[
-              { name: 'JS', color: 'yellow', fullName: 'JavaScript' },
-              { name: 'TS', color: 'blue', fullName: 'TypeScript' },
-              { name: 'RE', color: 'cyan', fullName: 'React' }
+              { name: 'JA', color: 'yellow', fullName: 'Java' },
+              { name: 'PY', color: 'blue', fullName: 'Python' },
+              { name: 'ML', color: 'cyan', fullName: 'Machine Learning' }
             ].map((tech, index) => (
               <div key={index} className="group cursor-pointer animate-float" style={{ animationDelay: `${index * 0.5}s` }}>
                 <div className={`w-16 h-16 bg-gradient-to-r from-${tech.color}-500/20 to-${tech.color}-500/20 rounded-full flex items-center justify-center border border-${tech.color}-400/30 hover:border-${tech.color}-400 transition-all duration-300 hover:scale-110 hover:rotate-12 hover:shadow-lg hover:shadow-${tech.color}-500/25`}>
-                  <span className={`text-${tech.color}-400 font-bold group-hover:animate-pulse`}>{tech.name}</span>
+                  <span className={`text-${tech.color}-400 font-bold group-hover:animate-pulse text-xs`}>{tech.name}</span>
                 </div>
                 <p className={`text-xs text-gray-500 mt-2 group-hover:text-${tech.color}-400 transition-colors opacity-0 group-hover:opacity-100 hidden sm:block`}>
                   {tech.fullName}

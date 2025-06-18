@@ -7,33 +7,33 @@ const Skills = () => {
 
   const skillCategories = [
     {
-      title: "Frontend Development",
+      title: "Programming Languages",
       skills: [
-        { name: "React", level: 85, color: "from-blue-400 to-blue-600" },
-        { name: "JavaScript", level: 90, color: "from-yellow-400 to-yellow-600" },
-        { name: "TypeScript", level: 75, color: "from-blue-500 to-blue-700" },
-        { name: "HTML/CSS", level: 95, color: "from-orange-400 to-orange-600" },
-        { name: "Tailwind CSS", level: 80, color: "from-teal-400 to-teal-600" }
+        { name: "Java", level: 90, color: "from-orange-400 to-orange-600" },
+        { name: "Python", level: 85, color: "from-green-400 to-blue-500" },
+        { name: "C Programming", level: 80, color: "from-blue-400 to-blue-600" },
+        { name: "SQL", level: 85, color: "from-purple-400 to-purple-600" },
+        { name: "JavaScript", level: 75, color: "from-yellow-400 to-yellow-600" }
       ]
     },
     {
-      title: "Backend Development",
+      title: "Machine Learning & AI",
       skills: [
-        { name: "Node.js", level: 80, color: "from-green-400 to-green-600" },
-        { name: "Python", level: 75, color: "from-green-500 to-blue-500" },
-        { name: "MongoDB", level: 70, color: "from-green-400 to-green-700" },
-        { name: "PostgreSQL", level: 65, color: "from-blue-400 to-blue-700" },
-        { name: "Express.js", level: 75, color: "from-gray-400 to-gray-600" }
+        { name: "Deep Learning", level: 85, color: "from-red-400 to-red-600" },
+        { name: "NLP", level: 80, color: "from-pink-400 to-pink-600" },
+        { name: "LSTM", level: 85, color: "from-indigo-400 to-indigo-600" },
+        { name: "BERT", level: 80, color: "from-cyan-400 to-cyan-600" },
+        { name: "Sentiment Analysis", level: 90, color: "from-emerald-400 to-emerald-600" }
       ]
     },
     {
       title: "Tools & Technologies",
       skills: [
-        { name: "Git", level: 85, color: "from-red-400 to-red-600" },
-        { name: "Docker", level: 60, color: "from-blue-400 to-cyan-400" },
-        { name: "VS Code", level: 95, color: "from-blue-500 to-blue-700" },
-        { name: "Figma", level: 70, color: "from-purple-400 to-pink-400" },
-        { name: "AWS", level: 55, color: "from-orange-400 to-yellow-400" }
+        { name: "Data Structures", level: 85, color: "from-gray-400 to-gray-600" },
+        { name: "Algorithms", level: 80, color: "from-violet-400 to-violet-600" },
+        { name: "HTML/CSS", level: 85, color: "from-orange-400 to-red-500" },
+        { name: "SQLPlus", level: 80, color: "from-blue-500 to-purple-500" },
+        { name: "Agile Methodology", level: 75, color: "from-teal-400 to-teal-600" }
       ]
     }
   ];
@@ -75,7 +75,7 @@ const Skills = () => {
             </h2>
             <div className="w-24 h-1 bg-gradient-to-r from-purple-400 to-pink-400 mx-auto rounded-full"></div>
             <p className="text-xl text-gray-300 mt-6 max-w-3xl mx-auto">
-              A comprehensive overview of my technical skills and proficiency levels
+              A comprehensive overview of my technical skills and proficiency levels in programming, machine learning, and software development
             </p>
           </div>
 
@@ -126,9 +126,9 @@ const Skills = () => {
             <h3 className="text-2xl font-bold text-white mb-8">Technologies I Work With</h3>
             <div className="flex flex-wrap justify-center gap-4 max-w-4xl mx-auto">
               {[
-                'React', 'Node.js', 'TypeScript', 'Python', 'MongoDB', 'PostgreSQL',
-                'Docker', 'AWS', 'Git', 'Figma', 'Tailwind', 'Express.js',
-                'Next.js', 'GraphQL', 'Redis', 'Jest'
+                'Java', 'Python', 'SQL', 'Machine Learning', 'Deep Learning', 'NLP',
+                'LSTM', 'BERT', 'Data Analysis', 'AdamW', 'Sentiment Analysis',
+                'HTML/CSS', 'JavaScript', 'Agile', 'SQLPlus', 'Algorithms'
               ].map((tech, index) => (
                 <span
                   key={index}

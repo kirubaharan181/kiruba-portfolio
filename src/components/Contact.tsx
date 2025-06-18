@@ -46,13 +46,13 @@ const Contact = () => {
     {
       icon: Phone,
       label: "Phone",
-      value: "+1 (555) 123-4567",
-      href: "tel:+15551234567"
+      value: "+91 9080257155",
+      href: "tel:+919080257155"
     },
     {
       icon: MapPin,
       label: "Location",
-      value: "San Francisco, CA",
+      value: "Pudhumarai, Sankarankovil, Tenkasi",
       href: null
     }
   ];
@@ -66,7 +66,7 @@ const Contact = () => {
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-purple-400 to-pink-400 mx-auto rounded-full"></div>
           <p className="text-xl text-gray-300 mt-6 max-w-3xl mx-auto">
-            I'm always excited to connect with fellow developers, potential collaborators, or anyone interested in my work
+            I'm always excited to connect with fellow developers, researchers, or anyone interested in machine learning and data science projects
           </p>
         </div>
 
@@ -76,8 +76,8 @@ const Contact = () => {
             <div>
               <h3 className="text-2xl font-bold text-white mb-6">Let's Connect</h3>
               <p className="text-gray-300 leading-relaxed mb-8">
-                Whether you have a project in mind, want to discuss opportunities, or just want to say hello, 
-                I'd love to hear from you. I'm currently open to internship opportunities and freelance projects.
+                Whether you have a research collaboration in mind, want to discuss machine learning projects, or just want to connect, 
+                I'd love to hear from you. I'm currently pursuing my B.Tech and actively seeking opportunities in data science and ML engineering.
               </p>
             </div>
 
@@ -107,9 +107,9 @@ const Contact = () => {
 
             {/* Call to Action */}
             <div className="p-6 bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-400/30 rounded-xl">
-              <h4 className="text-xl font-semibold text-white mb-3">Ready to work together?</h4>
+              <h4 className="text-xl font-semibold text-white mb-3">Ready to collaborate?</h4>
               <p className="text-gray-300 mb-4">
-                I'm currently available for new opportunities and would love to discuss how we can collaborate.
+                I'm currently available for research collaborations, internships, and would love to discuss how we can work together on exciting ML/AI projects.
               </p>
               <div className="flex gap-4">
                 <a
@@ -120,7 +120,7 @@ const Contact = () => {
                   Download Resume
                 </a>
                 <a
-                  href="https://linkedin.com"
+                  href="https://www.linkedin.com/in/kiruba-haran-7369a0320"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="px-4 py-2 bg-slate-700 hover:bg-slate-600 text-white rounded-lg transition-colors duration-300"
@@ -180,7 +180,7 @@ const Contact = () => {
                   required
                   rows={5}
                   className="w-full px-4 py-3 bg-slate-800 border border-gray-600 rounded-lg text-white focus:border-purple-400 focus:outline-none transition-colors duration-300 resize-none"
-                  placeholder="Tell me about your project or just say hello!"
+                  placeholder="Tell me about your project or research collaboration!"
                 />
               </div>
 
