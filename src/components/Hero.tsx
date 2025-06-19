@@ -21,7 +21,7 @@ const Hero = () => {
   ];
 
   const stats = [
-    { number: "3+", label: "Major Projects", color: "text-purple-400", icon: Code },
+    { number: "4+", label: "Major Projects", color: "text-purple-400", icon: Code },
     { number: "4+", label: "Years Learning", color: "text-pink-400", icon: Star },
     { number: "6+", label: "Certifications", color: "text-blue-400", icon: Award },
     { number: "95%", label: "Success Rate", color: "text-green-400", icon: Zap }

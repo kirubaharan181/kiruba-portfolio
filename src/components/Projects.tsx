@@ -19,17 +19,28 @@ const Projects = () => {
     },
     {
       id: 2,
-      title: "Sentiment Analysis & Hateful Speech Detection for Reviews",
-      description: "Advanced sentiment analysis model using machine learning techniques including LSTM and BERT for sentiment classification. Enhanced with hateful speech detection capabilities for comprehensive review analysis and ranking based on sentiment scores.",
-      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=250&fit=crop",
+      title: "Sentiment Analysis for Review Ranking",
+      description: "Advanced sentiment analysis model using machine learning techniques including LSTM and BERT for sentiment classification. Enhanced review analysis system that ranks reviews based on sentiment scores for better user experience.",
+      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=250&fit=crop&auto=format&q=80",
       category: "Data Analytics",
-      tech: ["Python", "LSTM", "BERT", "NLP", "Deep Learning", "AdamW"],
+      tech: ["Python", "LSTM", "BERT", "NLP", "Deep Learning", "Sentiment Analysis"],
+      github: "https://github.com/kirubaharan181",
+      demo: null,
+      year: "2024"
+    },
+    {
+      id: 3,
+      title: "Hateful Speech Detection System",
+      description: "Machine learning-based system for detecting hateful and toxic speech in social media content. Utilizes advanced natural language processing techniques with BERT and custom neural networks for accurate hate speech classification.",
+      image: "https://images.unsplash.com/photo-1555255707-c07966088b7b?w=400&h=250&fit=crop&auto=format&q=80",
+      category: "Data Analytics",
+      tech: ["Python", "BERT", "NLP", "Machine Learning", "Text Classification"],
       github: "https://github.com/kirubaharan181",
       demo: null,
       year: "2024-2025"
     },
     {
-      id: 3,
+      id: 4,
       title: "Wool Monitoring Application",
       description: "Built a Java-based tracking system for wool from farm to fabric. Integrated SQLPlus database for inventory and order management with an E-commerce platform.",
       image: "https://images.unsplash.com/photo-1586953208448-b95a79798f07?w=400&h=250&fit=crop",
