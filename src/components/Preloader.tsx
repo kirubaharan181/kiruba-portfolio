@@ -1,5 +1,6 @@
 
 import React, { useState, useEffect } from 'react';
+import { User } from 'lucide-react';
 
 const Preloader = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -28,8 +29,13 @@ const Preloader = () => {
       <div className="text-center">
         {/* Logo Animation */}
         <div className="mb-8">
-          <div className="text-4xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent animate-pulse">
-            &lt;Dev/&gt;
+          <div className="flex items-center justify-center space-x-2">
+            <div className="w-12 h-12 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full flex items-center justify-center animate-pulse">
+              <User className="w-6 h-6 text-white" />
+            </div>
+            <div className="text-4xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+              Portfolio
+            </div>
           </div>
         </div>
 

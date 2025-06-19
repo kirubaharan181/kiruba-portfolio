@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Download, GraduationCap, Briefcase, Award, User, Eye } from 'lucide-react';
 
@@ -46,6 +47,7 @@ const Resume = () => {
   const achievements = [
     "Presented 'Optimized Sentiment Analysis of TV Reviews Using AdamW' at national-level technical symposium",
     "Achieved high accuracy through fine-tuning and pre-trained embeddings in ML models",
+    "Attended one week Oracle Java Foundation class and earned badges",
     "Participated in District level Kabaddi matches showcasing teamwork and strategy",
     "Multiple Infosys certifications in Java, Python, SQL, and Agile Methodology"
   ];
@@ -69,7 +71,7 @@ const Resume = () => {
   };
 
   const handleViewResume = () => {
-    window.open('/Kirubaharan_Resume.pdf', '_blank');
+    window.open('/lovable-uploads/d63a560f-0924-492b-ad1d-401ac6fed058.png', '_blank');
   };
 
   return (

@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { ArrowDown, Download, ExternalLink, Github, Linkedin, Mail, Code, Star, Zap, Award } from 'lucide-react';
+import { ArrowDown, Download, ExternalLink, Github, Linkedin, Mail, Code, Star, Zap, Award, User } from 'lucide-react';
 
 const Hero = () => {
   const [currentRole, setCurrentRole] = useState(0);
@@ -23,14 +23,14 @@ const Hero = () => {
   const stats = [
     { number: "3+", label: "Major Projects", color: "text-purple-400", icon: Code },
     { number: "4+", label: "Years Learning", color: "text-pink-400", icon: Star },
-    { number: "5+", label: "Certifications", color: "text-blue-400", icon: Award },
-    { number: "10+", label: "Technologies", color: "text-green-400", icon: Zap }
+    { number: "6+", label: "Certifications", color: "text-blue-400", icon: Award },
+    { number: "8+", label: "Technologies", color: "text-green-400", icon: Zap }
   ];
 
   const socialLinks = [
     { icon: Github, href: "https://github.com/kirubaharan181", label: "GitHub", color: "hover:text-gray-300" },
     { icon: Linkedin, href: "https://www.linkedin.com/in/kiruba-haran-7369a0320", label: "LinkedIn", color: "hover:text-blue-400" },
-    { icon: Mail, href: "mailto:kirubakrishkk@gmail.com", label: "Email", color: "hover:text-purple-400" }
+    { icon: Mail, href: "#contact", label: "Email", color: "hover:text-purple-400" }
   ];
 
   // Interactive Canvas Animation
@@ -178,6 +178,11 @@ const Hero = () => {
     }
   };
 
+  const handleEmailClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    scrollToSection('contact');
+  };
+
   return (
     <section 
       id="home" 
@@ -228,8 +233,9 @@ const Hero = () => {
                 <div key={index} className="relative group">
                   <a
                     href={social.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                    onClick={social.href === '#contact' ? handleEmailClick : undefined}
+                    target={social.href === '#contact' ? undefined : "_blank"}
+                    rel={social.href === '#contact' ? undefined : "noopener noreferrer"}
                     className={`text-gray-400 ${social.color} transition-all duration-300 hover:scale-125 hover:rotate-12 relative`}
                     aria-label={social.label}
                   >

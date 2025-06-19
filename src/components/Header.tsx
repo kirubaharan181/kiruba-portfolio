@@ -1,6 +1,6 @@
 
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Github, Linkedin, Mail, Palette } from 'lucide-react';
+import { Menu, X, Github, Linkedin, Mail, Palette, User } from 'lucide-react';
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -51,6 +51,10 @@ const Header = () => {
     document.body.className = themes[newTheme].class;
   };
 
+  const handleMailClick = () => {
+    scrollToSection('contact');
+  };
+
   const navItems = [
     { id: 'home', label: 'Home' },
     { id: 'about', label: 'About' },
@@ -66,8 +70,13 @@ const Header = () => {
       <nav className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <div className="text-2xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-            &lt;Dev/&gt;
+          <div className="flex items-center space-x-2">
+            <div className="w-8 h-8 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full flex items-center justify-center">
+              <User className="w-5 h-5 text-white" />
+            </div>
+            <span className="text-xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+              Portfolio
+            </span>
           </div>
 
           {/* Desktop Navigation */}
@@ -92,18 +101,20 @@ const Header = () => {
 
           {/* Social Links & Theme Button */}
           <div className="hidden md:flex items-center space-x-4">
-            <a href="https://github.com" target="_blank" rel="noopener noreferrer" 
+            <a href="https://github.com/kirubaharan181" target="_blank" rel="noopener noreferrer" 
                className="text-gray-300 hover:text-purple-400 transition-colors duration-300">
               <Github size={20} />
             </a>
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer"
+            <a href="https://www.linkedin.com/in/kiruba-haran-7369a0320" target="_blank" rel="noopener noreferrer"
                className="text-gray-300 hover:text-purple-400 transition-colors duration-300">
               <Linkedin size={20} />
             </a>
-            <a href="mailto:kirubakrishkk@gmail.com"
-               className="text-gray-300 hover:text-purple-400 transition-colors duration-300">
+            <button
+              onClick={handleMailClick}
+              className="text-gray-300 hover:text-purple-400 transition-colors duration-300"
+            >
               <Mail size={20} />
-            </a>
+            </button>
             
             {/* Theme Change Button */}
             <button
@@ -143,18 +154,20 @@ const Header = () => {
               ))}
               <div className="flex items-center justify-between px-3 pt-4 border-t border-gray-700">
                 <div className="flex items-center space-x-4">
-                  <a href="https://github.com" target="_blank" rel="noopener noreferrer"
+                  <a href="https://github.com/kirubaharan181" target="_blank" rel="noopener noreferrer"
                      className="text-gray-300 hover:text-purple-400 transition-colors duration-300">
                     <Github size={20} />
                   </a>
-                  <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer"
+                  <a href="https://www.linkedin.com/in/kiruba-haran-7369a0320" target="_blank" rel="noopener noreferrer"
                      className="text-gray-300 hover:text-purple-400 transition-colors duration-300">
                     <Linkedin size={20} />
                   </a>
-                  <a href="mailto:kirubakrishkk@gmail.com"
-                     className="text-gray-300 hover:text-purple-400 transition-colors duration-300">
+                  <button
+                    onClick={handleMailClick}
+                    className="text-gray-300 hover:text-purple-400 transition-colors duration-300"
+                  >
                     <Mail size={20} />
-                  </a>
+                  </button>
                 </div>
                 <button
                   onClick={changeTheme}
