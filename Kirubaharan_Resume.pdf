@@ -1,0 +1,133 @@
+
+%PDF-1.4
+1 0 obj
+<<
+/Type /Catalog
+/Pages 2 0 R
+>>
+endobj
+
+2 0 obj
+<<
+/Type /Pages
+/Kids [3 0 R]
+/Count 1
+>>
+endobj
+
+3 0 obj
+<<
+/Type /Page
+/Parent 2 0 R
+/MediaBox [0 0 612 792]
+/Contents 4 0 R
+/Resources <<
+/Font <<
+/F1 5 0 R
+>>
+>>
+>>
+endobj
+
+4 0 obj
+<<
+/Length 1500
+>>
+stream
+BT
+/F1 24 Tf
+100 700 Td
+(KIRUBAHARAN) Tj
+0 -50 Td
+/F1 12 Tf
+(Data Analyst | Machine Learning Enthusiast) Tj
+0 -30 Td
+(Email: kirubakrishkk@gmail.com) Tj
+0 -20 Td
+(GitHub: github.com/kirubaharan181) Tj
+0 -20 Td
+(LinkedIn: linkedin.com/in/kiruba-haran-7369a0320) Tj
+
+0 -50 Td
+/F1 16 Tf
+(EDUCATION) Tj
+0 -30 Td
+/F1 12 Tf
+(B.Tech in Information Technology) Tj
+0 -20 Td
+(Mepco Schlenk Engineering College, Sivakasi) Tj
+0 -20 Td
+(2022 - 2026 | CGPA: 7.5/10) Tj
+
+0 -40 Td
+/F1 16 Tf
+(PROJECTS) Tj
+0 -30 Td
+/F1 12 Tf
+(TripTale - Travel Guidance App) Tj
+0 -20 Td
+(• Built using React and MERN stack) Tj
+0 -20 Td
+(• Features travel planning and recommendations) Tj
+
+0 -30 Td
+(Sentiment Analysis for Review Ranking) Tj
+0 -20 Td
+(• Machine learning model using LSTM and BERT) Tj
+0 -20 Td
+(• Focused on ranking reviews based on sentiment) Tj
+
+0 -40 Td
+/F1 16 Tf
+(SKILLS) Tj
+0 -30 Td
+/F1 12 Tf
+(Programming: Java, Python, SQL, JavaScript) Tj
+0 -20 Td
+(ML/AI: Deep Learning, NLP, LSTM, BERT) Tj
+0 -20 Td
+(Tools: Power BI, React, MERN Stack) Tj
+
+0 -40 Td
+/F1 16 Tf
+(CERTIFICATIONS) Tj
+0 -30 Td
+/F1 12 Tf
+(• Microsoft Power BI Data Analyst) Tj
+0 -20 Td
+(• Infosys Java Programming) Tj
+0 -20 Td
+(• Infosys Python Programming) Tj
+0 -20 Td
+(• Infosys SQL) Tj
+0 -20 Td
+(• Infosys Agile Methodology) Tj
+
+ET
+endstream
+endobj
+
+5 0 obj
+<<
+/Type /Font
+/Subtype /Type1
+/BaseFont /Helvetica
+>>
+endobj
+
+xref
+0 6
+0000000000 65535 f 
+0000000010 00000 n 
+0000000053 00000 n 
+0000000110 00000 n 
+0000000275 00000 n 
+0000001827 00000 n 
+trailer
+<<
+/Size 6
+/Root 1 0 R
+>>
+startxref
+1897
+%%EOF
