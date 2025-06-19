@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { Github, ExternalLink, Filter } from 'lucide-react';
 
@@ -18,28 +19,17 @@ const Projects = () => {
     },
     {
       id: 2,
-      title: "Sentiment Analysis for Review Ranking",
-      description: "Implemented machine learning model for analyzing sentiments in product reviews using LSTM and BERT for sentiment classification. Focused on ranking reviews based on sentiment scores.",
+      title: "Sentiment Analysis & Hateful Speech Detection for Reviews",
+      description: "Advanced sentiment analysis model using machine learning techniques including LSTM and BERT for sentiment classification. Enhanced with hateful speech detection capabilities for comprehensive review analysis and ranking based on sentiment scores.",
       image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=250&fit=crop",
       category: "Data Analytics",
-      tech: ["Python", "LSTM", "BERT", "NLP", "Deep Learning"],
+      tech: ["Python", "LSTM", "BERT", "NLP", "Deep Learning", "AdamW"],
       github: "https://github.com/kirubaharan181",
       demo: null,
-      year: "2025"
+      year: "2024-2025"
     },
     {
       id: 3,
-      title: "Optimized Sentiment Analysis of TV Reviews Using AdamW",
-      description: "Developed an advanced sentiment analysis model using deep learning techniques. Utilized AdamW optimizer for improved accuracy and performance with transformer-based models.",
-      image: "https://images.unsplash.com/photo-1518186285589-2f7649de83e0?w=400&h=250&fit=crop",
-      category: "Data Analytics",
-      tech: ["Python", "AdamW", "BERT", "RoBERTa", "DistilBERT"],
-      github: "https://github.com/kirubaharan181",
-      demo: null,
-      year: "2024"
-    },
-    {
-      id: 4,
       title: "Wool Monitoring Application",
       description: "Built a Java-based tracking system for wool from farm to fabric. Integrated SQLPlus database for inventory and order management with an E-commerce platform.",
       image: "https://images.unsplash.com/photo-1586953208448-b95a79798f07?w=400&h=250&fit=crop",

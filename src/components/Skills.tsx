@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect, useRef } from 'react';
 
 const Skills = () => {
@@ -16,13 +17,13 @@ const Skills = () => {
       ]
     },
     {
-      title: "Machine Learning & AI",
+      title: "Web Development",
       skills: [
-        { name: "Deep Learning", level: 85, color: "from-red-400 to-red-600" },
-        { name: "NLP", level: 80, color: "from-pink-400 to-pink-600" },
-        { name: "LSTM", level: 85, color: "from-indigo-400 to-indigo-600" },
-        { name: "BERT", level: 80, color: "from-cyan-400 to-cyan-600" },
-        { name: "Sentiment Analysis", level: 90, color: "from-emerald-400 to-emerald-600" }
+        { name: "HTML/CSS", level: 85, color: "from-orange-400 to-red-500" },
+        { name: "React", level: 80, color: "from-blue-400 to-blue-600" },
+        { name: "Express.js", level: 75, color: "from-green-400 to-green-600" },
+        { name: "MongoDB", level: 70, color: "from-emerald-400 to-emerald-600" },
+        { name: "MERN Stack", level: 80, color: "from-indigo-400 to-indigo-600" }
       ]
     },
     {
@@ -31,8 +32,8 @@ const Skills = () => {
         { name: "Power BI", level: 75, color: "from-yellow-400 to-orange-500" },
         { name: "Data Structures", level: 85, color: "from-gray-400 to-gray-600" },
         { name: "Algorithms", level: 80, color: "from-violet-400 to-violet-600" },
-        { name: "HTML/CSS", level: 85, color: "from-orange-400 to-red-500" },
         { name: "SQLPlus", level: 80, color: "from-blue-500 to-purple-500" },
+        { name: "Machine Learning", level: 75, color: "from-red-400 to-red-600" },
         { name: "Agile Methodology", level: 75, color: "from-teal-400 to-teal-600" }
       ]
     }
@@ -75,7 +76,7 @@ const Skills = () => {
             </h2>
             <div className="w-24 h-1 bg-gradient-to-r from-purple-400 to-pink-400 mx-auto rounded-full"></div>
             <p className="text-xl text-gray-300 mt-6 max-w-3xl mx-auto">
-              A comprehensive overview of my technical skills and proficiency levels in programming, machine learning, and data analysis
+              A comprehensive overview of my technical skills and proficiency levels in programming, web development, and data analysis
             </p>
           </div>
 
@@ -124,10 +125,9 @@ const Skills = () => {
             <h3 className="text-2xl font-bold text-white mb-8">Technologies I Work With</h3>
             <div className="flex flex-wrap justify-center gap-4 max-w-4xl mx-auto">
               {[
-                'Java', 'Python', 'SQL', 'Machine Learning', 'Deep Learning', 'NLP',
-                'LSTM', 'BERT', 'Data Analysis', 'Sentiment Analysis',
-                'HTML/CSS', 'JavaScript', 'Agile', 'Power BI',
-                'React', 'MERN Stack'
+                'Java', 'Python', 'SQL', 'JavaScript', 'React', 'Express.js',
+                'MongoDB', 'HTML/CSS', 'Machine Learning', 'Data Analysis',
+                'Power BI', 'MERN Stack', 'Agile'
               ].map((tech, index) => (
                 <span
                   key={index}

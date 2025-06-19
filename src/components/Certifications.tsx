@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { Award, Calendar, ExternalLink } from 'lucide-react';
 
@@ -37,16 +38,6 @@ const Certifications = () => {
     },
     {
       id: 4,
-      title: "Industrial 4.0 and Internet of Things",
-      issuer: "Infosys",
-      date: "2023",
-      image: "https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=300&h=200&fit=crop",
-      description: "Understanding Industry 4.0 concepts, IoT applications, and smart manufacturing technologies.",
-      skills: ["IoT", "Industry 4.0", "Smart Systems", "Automation"],
-      credentialUrl: "https://infosys.com"
-    },
-    {
-      id: 5,
       title: "Infosys Certification in SQL",
       issuer: "Infosys",
       date: "2023",
@@ -56,7 +47,7 @@ const Certifications = () => {
       credentialUrl: "https://infosys.com"
     },
     {
-      id: 6,
+      id: 5,
       title: "Infosys Certification in Agile Methodology",
       issuer: "Infosys",
       date: "2023",
@@ -64,6 +55,16 @@ const Certifications = () => {
       description: "Agile software development principles, Scrum framework, and project management best practices.",
       skills: ["Agile", "Scrum", "Project Management", "Team Collaboration"],
       credentialUrl: "https://infosys.com"
+    },
+    {
+      id: 6,
+      title: "Oracle Java Foundation",
+      issuer: "Oracle",
+      date: "2024",
+      image: "https://images.unsplash.com/photo-1633356122102-3fe601e05bd2?w=300&h=200&fit=crop",
+      description: "Attended one week Oracle Java Foundation class and earned badges covering Java fundamentals and programming concepts.",
+      skills: ["Java Fundamentals", "Oracle Certification", "Programming Concepts", "Software Development"],
+      credentialUrl: "https://oracle.com"
     }
   ];
 
@@ -76,7 +77,7 @@ const Certifications = () => {
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-purple-400 to-pink-400 mx-auto rounded-full"></div>
           <p className="text-xl text-gray-300 mt-6 max-w-3xl mx-auto">
-            Continuous learning and professional development through industry-recognized certifications from Microsoft and Infosys
+            Continuous learning and professional development through industry-recognized certifications from Microsoft, Infosys, and Oracle
           </p>
         </div>
 
@@ -156,7 +157,7 @@ const Certifications = () => {
             <div className="text-gray-300">Study Hours</div>
           </div>
           <div className="text-center">
-            <div className="text-3xl font-bold text-blue-400 mb-2">2</div>
+            <div className="text-3xl font-bold text-blue-400 mb-2">3</div>
             <div className="text-gray-300">Platforms</div>
           </div>
           <div className="text-center">
