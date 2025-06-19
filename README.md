@@ -1,73 +1,55 @@
-# Welcome to your Lovable project
+# 💼 Kiruba's Portfolio
 
-## Project info
+A modern, responsive personal portfolio built with **React**, **Vite**, **Tailwind CSS**, and designed with the help of **Lovable AI**.
 
-**URL**: https://lovable.dev/projects/4c1eef34-f77b-47c8-84f4-e862d92c9bb4
+> 🔗 **Live Site:** [https://kirubaharan181.github.io/kiruba-portfolio/](https://kirubaharan181.github.io/kiruba-portfolio/)
 
-## How can I edit this code?
+---
 
-There are several ways of editing your application.
+## 📌 Project Info
 
-**Use Lovable**
+This project showcases my work, skills, resume, and projects using a fast and customizable front-end stack. It is hosted on **GitHub Pages** and supports easy updates through Lovable AI or manual editing.
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/4c1eef34-f77b-47c8-84f4-e862d92c9bb4) and start prompting.
+---
 
-Changes made via Lovable will be committed automatically to this repo.
+## ⚙️ Technologies Used
 
-**Use your preferred IDE**
+- ⚛️ **React**
+- ⚡ **Vite**
+- 🎨 **Tailwind CSS**
+- 🧠 **shadcn-ui**
+- 🪄 **Lovable AI** (for smart design & layout prompting)
+- 📄 TypeScript
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+---
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+## 🚀 Deployment
 
-Follow these steps:
+The site is automatically deployed to **GitHub Pages** using GitHub Actions.
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+### 🔄 Auto Deployment Flow:
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+1. Any push to the `main` branch triggers a GitHub Action.
+2. The Vite project is built.
+3. Output (`dist/`) is pushed to the `gh-pages` branch.
+4. GitHub Pages serves the site from `https://kirubaharan181.github.io/kiruba-portfolio/`.
 
-# Step 3: Install the necessary dependencies.
-npm i
+> 📁 Vite config includes:  
+> `base: "/kiruba-portfolio/"` (required for correct GitHub Pages routing)
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+---
+
+## 🛠️ Run Locally
+
+To work on this project locally:
+
+```bash
+# Clone the repo
+git clone https://github.com/kirubaharan181/kiruba-portfolio.git
+cd kiruba-portfolio
+
+# Install dependencies
+npm install
+
+# Start the dev server
 npm run dev
-```
-
-**Edit a file directly in GitHub**
-
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/4c1eef34-f77b-47c8-84f4-e862d92c9bb4) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
