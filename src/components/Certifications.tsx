@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Award, Calendar, ExternalLink } from 'lucide-react';
 
@@ -11,7 +10,7 @@ const Certifications = () => {
       title: "Microsoft Power BI Data Analyst",
       issuer: "Microsoft",
       date: "2024",
-      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=300&h=200&fit=crop",
+      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=300&h=200&fit=crop",
       description: "Comprehensive Power BI certification covering data visualization, dashboard creation, and business intelligence analytics.",
       skills: ["Power BI", "Data Visualization", "DAX", "Power Query", "Business Intelligence"],
       credentialUrl: "https://microsoft.com"
@@ -88,7 +87,6 @@ const Certifications = () => {
               className="group bg-slate-800/30 rounded-xl overflow-hidden border border-gray-700 hover:border-purple-400/50 transition-all duration-300 hover:transform hover:scale-105 cursor-pointer"
               onClick={() => setSelectedCert(selectedCert === cert.id ? null : cert.id)}
             >
-              {/* Certificate Image */}
               <div className="relative overflow-hidden">
                 <img
                   src={cert.image}
@@ -99,7 +97,6 @@ const Certifications = () => {
                 <Award className="absolute top-3 right-3 text-yellow-400" size={24} />
               </div>
 
-              {/* Certificate Content */}
               <div className="p-6">
                 <h3 className="text-lg font-bold text-white mb-2 group-hover:text-purple-400 transition-colors duration-300">
                   {cert.title}
@@ -112,14 +109,12 @@ const Certifications = () => {
                   <span>{cert.date}</span>
                 </div>
 
-                {/* Expanded Details */}
                 {selectedCert === cert.id && (
                   <div className="mt-4 pt-4 border-t border-gray-600 animate-fade-in">
                     <p className="text-gray-300 mb-4 text-sm leading-relaxed">
                       {cert.description}
                     </p>
                     
-                    {/* Skills */}
                     <div className="mb-4">
                       <h4 className="text-white font-semibold mb-2">Skills Covered:</h4>
                       <div className="flex flex-wrap gap-1">
@@ -134,7 +129,6 @@ const Certifications = () => {
                       </div>
                     </div>
 
-                    {/* View Credential Button */}
                     <a
                       href={cert.credentialUrl}
                       target="_blank"
@@ -152,7 +146,6 @@ const Certifications = () => {
           ))}
         </div>
 
-        {/* Statistics */}
         <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8">
           <div className="text-center">
             <div className="text-3xl font-bold text-purple-400 mb-2">6+</div>

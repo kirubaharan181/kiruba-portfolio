@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { ArrowDown, Download, ExternalLink, Github, Linkedin, Mail, Code, Star, Zap } from 'lucide-react';
+import { ArrowDown, Download, ExternalLink, Github, Linkedin, Mail, Code, Star, Zap, Award } from 'lucide-react';
 
 const Hero = () => {
   const [currentRole, setCurrentRole] = useState(0);
@@ -12,7 +12,7 @@ const Hero = () => {
   const animationRef = useRef<number>();
 
   const roles = [
-    "Aspiring IT Professional",
+    "Aspiring Data Analyst",
     "Tech Explorer", 
     "Data Analytics Enthusiast",
     "Machine Learning Explorer",
@@ -23,7 +23,7 @@ const Hero = () => {
   const stats = [
     { number: "3+", label: "Major Projects", color: "text-purple-400", icon: Code },
     { number: "4+", label: "Years Learning", color: "text-pink-400", icon: Star },
-    { number: "5+", label: "Certifications", color: "text-blue-400", icon: Github },
+    { number: "5+", label: "Certifications", color: "text-blue-400", icon: Award },
     { number: "10+", label: "Technologies", color: "text-green-400", icon: Zap }
   ];
 
@@ -56,7 +56,6 @@ const Hero = () => {
 
     const colors = ['#a855f7', '#ec4899', '#3b82f6', '#10b981'];
 
-    // Create particles
     for (let i = 0; i < 50; i++) {
       particles.push({
         x: Math.random() * canvas.width,
@@ -73,15 +72,12 @@ const Hero = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
 
       particles.forEach((particle, index) => {
-        // Update position
         particle.x += particle.vx;
         particle.y += particle.vy;
 
-        // Bounce off edges
         if (particle.x < 0 || particle.x > canvas.width) particle.vx *= -1;
         if (particle.y < 0 || particle.y > canvas.height) particle.vy *= -1;
 
-        // Draw particle
         ctx.save();
         ctx.globalAlpha = particle.alpha;
         ctx.fillStyle = particle.color;
@@ -90,7 +86,6 @@ const Hero = () => {
         ctx.fill();
         ctx.restore();
 
-        // Connect nearby particles
         particles.forEach((otherParticle, otherIndex) => {
           if (index !== otherIndex) {
             const dx = particle.x - otherParticle.x;
@@ -197,17 +192,14 @@ const Hero = () => {
         style={{ zIndex: 1 }}
       />
 
-      {/* Enhanced Animated Background - Moved to corners and edges */}
       <div className="absolute inset-0" style={{ zIndex: 2 }}>
         <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-purple-900/20 to-slate-900"></div>
         
-        {/* Floating geometric shapes positioned away from text */}
         <div className="absolute top-10 left-10 w-16 h-16 border border-purple-400/20 rotate-45 animate-spin hidden md:block" style={{ animationDuration: '20s' }}></div>
         <div className="absolute top-10 right-10 w-12 h-12 border border-pink-400/20 rotate-12 animate-pulse hidden md:block"></div>
         <div className="absolute bottom-32 left-10 w-20 h-20 border border-blue-400/20 rounded-full animate-bounce hidden md:block" style={{ animationDelay: '2s' }}></div>
         <div className="absolute bottom-32 right-10 w-16 h-16 bg-gradient-to-r from-purple-500/10 to-pink-500/10 rounded-full animate-pulse hidden md:block"></div>
         
-        {/* Interactive mouse follower */}
         <div
           className="absolute w-6 h-6 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full pointer-events-none transition-all duration-300 ease-out hidden md:block"
           style={{
@@ -222,18 +214,15 @@ const Hero = () => {
 
       <div className="container mx-auto px-4 sm:px-6 text-center relative z-10">
         <div className="animate-fade-in">
-          {/* Enhanced Name Animation */}
           <div className="mb-8">
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 group relative">
               <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent hover:from-purple-300 hover:to-pink-300 transition-all duration-500 cursor-default">
                 Kirubaharan
               </span>
-              {/* Floating sparkles */}
               <div className="absolute -top-4 -right-4 w-4 h-4 bg-yellow-400 rounded-full animate-ping opacity-75 hidden md:block"></div>
               <div className="absolute -bottom-2 -left-2 w-3 h-3 bg-blue-400 rounded-full animate-pulse hidden md:block"></div>
             </h1>
             
-            {/* Social Links - Better positioned with improved tooltips */}
             <div className="flex justify-center space-x-8 mb-12">
               {socialLinks.map((social, index) => (
                 <div key={index} className="relative group">
@@ -254,7 +243,6 @@ const Hero = () => {
             </div>
           </div>
           
-          {/* Enhanced Typing Animation */}
           <div className="text-xl sm:text-2xl md:text-3xl text-gray-300 mb-8 h-12 relative">
             <span className="relative">
               <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
@@ -264,15 +252,13 @@ const Hero = () => {
             </span>
           </div>
 
-          {/* Enhanced Description */}
           <div className="relative mb-8">
             <p className="text-lg md:text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed">
-              Passionate IT professional with a strong foundation in software development, data analytics, and machine learning. 
-              Currently exploring Sentiment Analysis and Hateful Sentiment Detection using Twitter data, aiming to leverage data-driven insights for impactful solutions.
+              Passionate Data Analyst with a strong foundation in software development and machine learning. 
+              Currently exploring data analysis techniques and sentiment analysis for review ranking systems, aiming to leverage data-driven insights for impactful business solutions.
             </p>
           </div>
 
-          {/* Enhanced Animated Stats */}
           {showStats && (
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
               {stats.map((stat, index) => (
@@ -293,11 +279,10 @@ const Hero = () => {
             </div>
           )}
 
-          {/* Enhanced Interactive Action Buttons */}
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16">
             <a
-              href="/resume.pdf"
-              download
+              href="/Kirubaharan_Resume.pdf"
+              download="Kirubaharan_Resume.pdf"
               className="group relative px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full font-semibold text-white overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-purple-500/25 flex items-center gap-3 w-full sm:w-auto justify-center"
             >
               <Download className="w-5 h-5 group-hover:animate-bounce" />
@@ -321,12 +306,11 @@ const Hero = () => {
             </button>
           </div>
 
-          {/* Tech Stack - Positioned higher to avoid overlap */}
           <div className="flex justify-center space-x-8 mb-32">
             {[
-              { name: 'JA', color: 'yellow', fullName: 'Java' },
               { name: 'PY', color: 'blue', fullName: 'Python' },
-              { name: 'ML', color: 'cyan', fullName: 'Machine Learning' }
+              { name: 'SQL', color: 'purple', fullName: 'SQL' },
+              { name: 'ML', color: 'green', fullName: 'Machine Learning' }
             ].map((tech, index) => (
               <div key={index} className="group cursor-pointer animate-float" style={{ animationDelay: `${index * 0.5}s` }}>
                 <div className={`w-16 h-16 bg-gradient-to-r from-${tech.color}-500/20 to-${tech.color}-500/20 rounded-full flex items-center justify-center border border-${tech.color}-400/30 hover:border-${tech.color}-400 transition-all duration-300 hover:scale-110 hover:rotate-12 hover:shadow-lg hover:shadow-${tech.color}-500/25`}>
@@ -340,7 +324,6 @@ const Hero = () => {
           </div>
         </div>
 
-        {/* Scroll indicator - Moved further down */}
         <button
           onClick={scrollToAbout}
           className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-purple-400 animate-bounce cursor-pointer hover:text-purple-300 transition-colors duration-300 group"
@@ -355,7 +338,6 @@ const Hero = () => {
         </button>
       </div>
 
-      {/* Custom CSS for floating animation */}
       <style>{`
         @keyframes float {
           0%, 100% { transform: translateY(0px); }

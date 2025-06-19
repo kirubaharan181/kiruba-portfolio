@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect, useRef } from 'react';
 
 const Skills = () => {
@@ -76,7 +75,7 @@ const Skills = () => {
             </h2>
             <div className="w-24 h-1 bg-gradient-to-r from-purple-400 to-pink-400 mx-auto rounded-full"></div>
             <p className="text-xl text-gray-300 mt-6 max-w-3xl mx-auto">
-              A comprehensive overview of my technical skills and proficiency levels in programming, machine learning, and software development
+              A comprehensive overview of my technical skills and proficiency levels in programming, machine learning, and data analysis
             </p>
           </div>
 
@@ -107,7 +106,6 @@ const Skills = () => {
                           }}
                         ></div>
                         
-                        {/* Shimmer effect */}
                         <div
                           className={`absolute top-0 left-0 h-full w-8 bg-gradient-to-r from-transparent via-white/20 to-transparent ${isVisible ? 'shimmer-animation' : ''}`}
                           style={{
@@ -122,15 +120,14 @@ const Skills = () => {
             ))}
           </div>
 
-          {/* Tech Stack Cloud */}
           <div className="mt-16 text-center">
             <h3 className="text-2xl font-bold text-white mb-8">Technologies I Work With</h3>
             <div className="flex flex-wrap justify-center gap-4 max-w-4xl mx-auto">
               {[
                 'Java', 'Python', 'SQL', 'Machine Learning', 'Deep Learning', 'NLP',
-                'LSTM', 'BERT', 'Data Analysis', 'AdamW', 'Sentiment Analysis',
-                'HTML/CSS', 'JavaScript', 'Agile', 'SQLPlus', 'Algorithms', 'Power BI',
-                'React', 'MERN Stack', 'MongoDB', 'Express.js'
+                'LSTM', 'BERT', 'Data Analysis', 'Sentiment Analysis',
+                'HTML/CSS', 'JavaScript', 'Agile', 'Power BI',
+                'React', 'MERN Stack'
               ].map((tech, index) => (
                 <span
                   key={index}

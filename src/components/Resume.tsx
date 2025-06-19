@@ -1,6 +1,5 @@
-
 import React from 'react';
-import { Download, GraduationCap, Briefcase, Award, User } from 'lucide-react';
+import { Download, GraduationCap, Briefcase, Award, User, Eye } from 'lucide-react';
 
 const Resume = () => {
   const education = [
@@ -29,10 +28,10 @@ const Resume = () => {
 
   const experience = [
     {
-      title: "Research Project - Sentiment Analysis",
+      title: "Research Project - Sentiment Analysis for Review Ranking",
       company: "Academic Research",
       period: "2024 - 2025",
-      description: "Implemented machine learning model for analyzing sentiments on Twitter data using LSTM and BERT for sentiment classification, focusing on detecting hateful speech.",
+      description: "Implemented machine learning model for analyzing sentiments in reviews using LSTM and BERT for sentiment classification, focusing on ranking reviews based on sentiment scores.",
       icon: Briefcase
     },
     {
@@ -60,6 +59,19 @@ const Resume = () => {
     "Problem Solving"
   ];
 
+  const handleDownload = () => {
+    const link = document.createElement('a');
+    link.href = '/Kirubaharan_Resume.pdf';
+    link.download = 'Kirubaharan_Resume.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
+  const handleViewResume = () => {
+    window.open('/Kirubaharan_Resume.pdf', '_blank');
+  };
+
   return (
     <section id="resume" className="py-20 bg-slate-800/30">
       <div className="container mx-auto px-6">
@@ -69,12 +81,11 @@ const Resume = () => {
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-purple-400 to-pink-400 mx-auto rounded-full"></div>
           <p className="text-xl text-gray-300 mt-6 max-w-3xl mx-auto">
-            My academic journey, research experience, and key achievements in technology and machine learning
+            My academic journey, research experience, and key achievements in technology and data analytics
           </p>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12 mb-12">
-          {/* Education */}
           <div className="bg-slate-900/50 p-8 rounded-xl border border-gray-700">
             <div className="flex items-center mb-6">
               <GraduationCap className="text-purple-400 mr-3" size={28} />
@@ -94,7 +105,6 @@ const Resume = () => {
             ))}
           </div>
 
-          {/* Experience */}
           <div className="bg-slate-900/50 p-8 rounded-xl border border-gray-700">
             <div className="flex items-center mb-6">
               <Briefcase className="text-purple-400 mr-3" size={28} />
@@ -118,7 +128,6 @@ const Resume = () => {
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12 mb-12">
-          {/* Achievements */}
           <div className="bg-slate-900/50 p-8 rounded-xl border border-gray-700">
             <div className="flex items-center mb-6">
               <Award className="text-purple-400 mr-3" size={28} />
@@ -135,7 +144,6 @@ const Resume = () => {
             </ul>
           </div>
 
-          {/* Soft Skills */}
           <div className="bg-slate-900/50 p-8 rounded-xl border border-gray-700">
             <div className="flex items-center mb-6">
               <User className="text-purple-400 mr-3" size={28} />
@@ -155,16 +163,22 @@ const Resume = () => {
           </div>
         </div>
 
-        {/* Download Resume Button */}
-        <div className="text-center">
-          <a
-            href="/resume.pdf"
-            download
+        <div className="text-center flex flex-col sm:flex-row gap-4 justify-center">
+          <button
+            onClick={handleViewResume}
+            className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-500 text-white rounded-full font-semibold hover:from-blue-600 hover:to-cyan-600 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-blue-500/25"
+          >
+            <Eye size={20} />
+            Click to View Resume
+          </button>
+          
+          <button
+            onClick={handleDownload}
             className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-full font-semibold hover:from-purple-600 hover:to-pink-600 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-purple-500/25"
           >
             <Download size={20} />
             Download Full Resume
-          </a>
+          </button>
         </div>
       </div>
     </section>
