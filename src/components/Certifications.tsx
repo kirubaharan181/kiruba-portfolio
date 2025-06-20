@@ -61,7 +61,7 @@ const Certifications = () => {
       title: "Oracle Java Foundation",
       issuer: "Oracle",
       date: "2024",
-      image: "https://i.ibb.co/Hfw1nt82/java2.png",
+      image: "https://i.ibb.co/MxF7j5ZX/java3.png",
       description: "Attended one week Oracle Java Foundation class and earned badges covering Java fundamentals and programming concepts.",
       skills: ["Java Fundamentals", "Oracle Certification", "Programming Concepts", "Software Development"],
       credentialUrl: "https://i.ibb.co/Kzc0nHJz/Screenshot-2025-06-20-142911.png"
@@ -92,7 +92,7 @@ const Certifications = () => {
                 <img
                   src={cert.image}
                   alt={cert.title}
-                  className="w-full h-32 object-cover group-hover:scale-110 transition-transform duration-500"
+                  className="w-full h-auto object-cover group-hover:scale-110 transition-transform duration-500 md:h-48 lg:h-64"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent"></div>
                 <Award className="absolute top-3 right-3 text-yellow-400" size={24} />
