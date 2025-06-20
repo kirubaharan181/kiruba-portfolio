@@ -63,15 +63,15 @@ const Resume = () => {
 
   const handleDownload = () => {
     const link = document.createElement('a');
-    link.href = '/Kirubaharan_Resume.pdf';
-    link.download = 'Kirubaharan_Resume.pdf';
+    link.href = 'https://i.ibb.co/zkwGnBh/Kirubaharan-Resume-page-0001.jpg';
+    link.download = 'Kirubaharan-Resume.jpg';
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
   };
 
   const handleViewResume = () => {
-    window.open('/lovable-uploads/d63a560f-0924-492b-ad1d-401ac6fed058.png', '_blank');
+    window.open('https://i.ibb.co/zkwGnBh/Kirubaharan-Resume-page-0001.jpg', '_blank');
   };
 
   return (
