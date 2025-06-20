@@ -22,7 +22,7 @@ const Footer = () => {
     },
     {
       icon: Mail,
-      href: "#contact",
+      href: "mailto:kirubakrishkk@gmail.com",
       label: "Email",
       color: "hover:text-purple-400"
     }
