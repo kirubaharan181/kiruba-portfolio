@@ -1,6 +1,6 @@
 # 💼 Kiruba's Portfolio
 
-A modern, responsive personal portfolio built with **React**, **Vite**, **Tailwind CSS**, and designed with the help of **Lovable AI**.
+A modern, responsive personal portfolio built with **React**, **Vite**, **Tailwind CSS**.
 
 > 🔗 **Live Site:** [https://kirubaharan181.github.io/kiruba-portfolio/](https://kirubaharan181.github.io/kiruba-portfolio/)
 
@@ -8,7 +8,7 @@ A modern, responsive personal portfolio built with **React**, **Vite**, **Tailwi
 
 ## 📌 Project Info
 
-This project showcases my work, skills, resume, and projects using a fast and customizable front-end stack. It is hosted on **GitHub Pages** and supports easy updates through Lovable AI or manual editing.
+This project showcases my work, skills, resume, and projects using a fast and customizable front-end stack. It is hosted on **GitHub Pages** , supports easy updates and manual editing.
 
 ---
 
@@ -17,9 +17,7 @@ This project showcases my work, skills, resume, and projects using a fast and cu
 - ⚛️ **React**
 - ⚡ **Vite**
 - 🎨 **Tailwind CSS**
-- 🧠 **shadcn-ui**
-- 🪄 **Lovable AI** (for smart design & layout prompting)
-- 📄 TypeScript
+- 📄 **TypeScript**
 
 ---
 
