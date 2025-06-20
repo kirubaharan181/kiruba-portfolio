@@ -274,7 +274,7 @@ const About = () => {
             </button>
             <div className="relative overflow-hidden rounded-2xl">
               <img
-                src="/lovable-uploads/485dbcc1-8ae4-42c2-b8eb-443bed2b31df.png"
+                src="/lovable-uploads/dp.jpg"
                 alt="Kirubaharan - Full View"
                 className="w-full h-auto max-h-[80vh] object-cover animate-scale-in"
               />
