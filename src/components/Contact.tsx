@@ -1,5 +1,6 @@
 
 import React, { useState } from 'react';
+import emailjs from 'emailjs-com';
 import { Mail, Phone, MapPin, Send } from 'lucide-react';
 
 const Contact = () => {
@@ -13,20 +14,27 @@ const Contact = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
-    // Create mailto link with form data
-    const subject = encodeURIComponent(`Portfolio Contact from ${formData.name}`);
-    const body = encodeURIComponent(`Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`);
-    const mailtoLink = `mailto:kirubakrishkk@gmail.com?subject=${subject}&body=${body}`;
-    
-    // Open default email client
-    window.location.href = mailtoLink;
-    
-    setTimeout(() => {
-      setIsSubmitting(false);
+
+    try {
+      await emailjs.send(
+        'service_3wkx0wp',         // Your EmailJS Service ID
+        'template_pj3gv7l',        // Your EmailJS Template ID
+        {
+          from_name: formData.name,
+          from_email: formData.email,
+          message: formData.message,
+        },
+        'jgS7f_lbCiMslKY-r'        // Your EmailJS Public Key
+      );
+
+      alert('✅ Message sent successfully!');
       setFormData({ name: '', email: '', message: '' });
-      alert('Email client opened! Your message has been prepared.');
-    }, 1000);
+    } catch (error) {
+      console.error('❌ Email sending error:', error);
+      alert('Something went wrong. Please try again later.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -192,7 +200,7 @@ const Contact = () => {
                 {isSubmitting ? (
                   <>
                     <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin"></div>
-                    Preparing Email...
+                    Sending...
                   </>
                 ) : (
                   <>
