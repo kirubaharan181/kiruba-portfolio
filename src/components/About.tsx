@@ -92,7 +92,7 @@ const About = () => {
                 onClick={() => setIsProfileModalOpen(true)}
               >
                 <img
-                  src="public/lovable-uploads/dp.jpg"
+                  src="https://i.ibb.co/Z1gxwmXb/dp.jpg"
                   alt="Kirubaharan"
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                 />
@@ -274,7 +274,7 @@ const About = () => {
             </button>
             <div className="relative overflow-hidden rounded-2xl">
               <img
-                src="/lovable-uploads/dp.jpg"
+                src="https://i.ibb.co/Z1gxwmXb/dp.jpg"
                 alt="Kirubaharan - Full View"
                 className="w-full h-auto max-h-[80vh] object-cover animate-scale-in"
               />
