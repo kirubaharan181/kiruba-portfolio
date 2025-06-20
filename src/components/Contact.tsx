@@ -141,10 +141,11 @@ const Contact = () => {
               <div className="flex gap-4">
                 <a
                   href="https://i.ibb.co/zkwGnBh/Kirubaharan-Resume-page-0001.jpg"
-                  download="Kirubaharan_Resume.jpg"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="px-4 py-2 bg-purple-500 hover:bg-purple-600 text-white rounded-lg transition-colors duration-300"
                 >
-                  Download Resume
+                  View Resume
                 </a>
                 <a
                   href="https://www.linkedin.com/in/kiruba-haran-7369a0320"
