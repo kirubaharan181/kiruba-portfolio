@@ -92,7 +92,7 @@ const About = () => {
                 onClick={() => setIsProfileModalOpen(true)}
               >
                 <img
-                  src="/lovable-uploads/dp.jpg"
+                  src="public/lovable-uploads/dp.jpg"
                   alt="Kirubaharan"
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                 />
