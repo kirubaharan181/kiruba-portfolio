@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import emailjs from 'emailjs-com';
 import { Mail, Phone, MapPin, Send } from 'lucide-react';
+import { useToast } from '@/hooks/use-toast';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -10,28 +11,46 @@ const Contact = () => {
     message: ''
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const { toast } = useToast();
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
 
     try {
-      await emailjs.send(
-        'service_3wkx0wp',         // Your EmailJS Service ID
-        'template_pj3gv7l',        // Your EmailJS Template ID
+      console.log('Sending email with data:', formData);
+      
+      const result = await emailjs.send(
+        'service_3wkx0wp',
+        'template_pj3gv7l',
         {
+          to_email: 'kirubakrishkk@gmail.com',  // Recipient email
           from_name: formData.name,
           from_email: formData.email,
+          reply_to: formData.email,
+          subject: `Portfolio Contact from ${formData.name}`,
           message: formData.message,
+          to_name: 'Kirubaharan'
         },
-        'jgS7f_lbCiMslKY-r'        // Your EmailJS Public Key
+        'jgS7f_lbCiMslKY-r'
       );
 
-      alert('✅ Message sent successfully!');
+      console.log('Email sent successfully:', result);
+      
+      toast({
+        title: "Message Sent Successfully!",
+        description: "Thank you for your message. I'll get back to you soon.",
+      });
+      
       setFormData({ name: '', email: '', message: '' });
     } catch (error) {
       console.error('❌ Email sending error:', error);
-      alert('Something went wrong. Please try again later.');
+      
+      toast({
+        title: "Failed to Send Message",
+        description: "Something went wrong. Please try again or contact me directly.",
+        variant: "destructive",
+      });
     } finally {
       setIsSubmitting(false);
     }
