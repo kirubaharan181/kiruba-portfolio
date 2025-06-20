@@ -14,7 +14,7 @@ const Certifications = () => {
       image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=300&h=200&fit=crop&auto=format&q=80",
       description: "Comprehensive Power BI certification covering data visualization, dashboard creation, and business intelligence analytics.",
       skills: ["Power BI", "Data Visualization", "DAX", "Power Query", "Business Intelligence"],
-      credentialUrl: "https://microsoft.com"
+      credentialUrl: "https://i.ibb.co/TDbX6vDR/Power-BI-Certificate-page-0001.jpg"
     },
     {
       id: 2,
@@ -24,7 +24,7 @@ const Certifications = () => {
       image: "https://images.unsplash.com/photo-1517180102446-f3ece451e9d8?w=300&h=200&fit=crop&auto=format&q=80",
       description: "Comprehensive Java programming certification covering core concepts, OOP principles, and advanced Java features.",
       skills: ["Java", "OOP", "Exception Handling", "Collections"],
-      credentialUrl: "https://infosys.com"
+      credentialUrl: "https://i.ibb.co/nNgTrLtX/JAVA-CERTIFICATE.jpg"
     },
     {
       id: 3,
@@ -44,7 +44,7 @@ const Certifications = () => {
       image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=300&h=200&fit=crop&auto=format&q=80",
       description: "Database management and SQL programming covering queries, joins, and database design principles.",
       skills: ["SQL", "Database Design", "Data Management", "Queries"],
-      credentialUrl: "https://infosys.com"
+      credentialUrl: "https://i.ibb.co/hxm3nmmH/nosql-certificate-page-0001.jpg"
     },
     {
       id: 5,
@@ -54,17 +54,17 @@ const Certifications = () => {
       image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=300&h=200&fit=crop&auto=format&q=80",
       description: "Agile software development principles, Scrum framework, and project management best practices.",
       skills: ["Agile", "Scrum", "Project Management", "Team Collaboration"],
-      credentialUrl: "https://infosys.com"
+      credentialUrl: "https://i.ibb.co/j923YX7N/AGILE-CERTIFICATE.jpg"
     },
     {
       id: 6,
       title: "Oracle Java Foundation",
       issuer: "Oracle",
       date: "2024",
-      image: "https://images.unsplash.com/photo-1633356122102-3fe601e05bd2?w=300&h=200&fit=crop&auto=format&q=80",
+      image: "https://i.ibb.co/Ggs0rW1/Screenshot-2025-06-20-143255.png",
       description: "Attended one week Oracle Java Foundation class and earned badges covering Java fundamentals and programming concepts.",
       skills: ["Java Fundamentals", "Oracle Certification", "Programming Concepts", "Software Development"],
-      credentialUrl: "https://oracle.com"
+      credentialUrl: "https://i.ibb.co/Kzc0nHJz/Screenshot-2025-06-20-142911.png"
     }
   ];
 
@@ -153,15 +153,15 @@ const Certifications = () => {
             <div className="text-gray-300">Certifications</div>
           </div>
           <div className="text-center">
-            <div className="text-3xl font-bold text-pink-400 mb-2">350+</div>
-            <div className="text-gray-300">Study Hours</div>
+            <div className="text-3xl font-bold text-pink-400 mb-2">250+</div>
+            <div className="text-gray-300">Learning Hours</div>
           </div>
           <div className="text-center">
             <div className="text-3xl font-bold text-blue-400 mb-2">3</div>
             <div className="text-gray-300">Platforms</div>
           </div>
           <div className="text-center">
-            <div className="text-3xl font-bold text-green-400 mb-2">98%</div>
+            <div className="text-3xl font-bold text-green-400 mb-2">90%</div>
             <div className="text-gray-300">Average Score</div>
           </div>
         </div>
