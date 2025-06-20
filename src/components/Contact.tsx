@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from 'react';
+
+import React, { useState } from 'react';
 import emailjs from 'emailjs-com';
 import { Mail, Phone, MapPin, Send } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
@@ -12,64 +13,42 @@ const Contact = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
 
-  // Initialize EmailJS with User ID from environment variable
-  useEffect(() => {
-    emailjs.init(process.env.REACT_APP_EMAILJS_USER_ID || 'jgS7f_lbCiMslKY-r');
-  }, []);
-
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-
-    // Validate form data
-    if (!formData.name || !formData.email || !formData.message) {
-      toast({
-        title: "Missing Fields",
-        description: "Please fill out all required fields.",
-        variant: "destructive",
-      });
-      return;
-    }
-
-    const isValidEmail = (email: string) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-    if (!isValidEmail(formData.email)) {
-      toast({
-        title: "Invalid Email",
-        description: "Please enter a valid email address.",
-        variant: "destructive",
-      });
-      return;
-    }
-
     setIsSubmitting(true);
 
     try {
       console.log('Sending email with data:', formData);
+      
       const result = await emailjs.send(
-        'service_3wkx0wp', // Replace with your EmailJS Service ID
-        'template_pj3gv7l', // Replace with your EmailJS Template ID
+        'service_3wkx0wp',
+        'template_pj3gv7l',
         {
-          to_email: 'kirubakrishkk@gmail.com',
+          to_email: 'kirubakrishkk@gmail.com',  // Recipient email
           from_name: formData.name,
           from_email: formData.email,
           reply_to: formData.email,
           subject: `Portfolio Contact from ${formData.name}`,
           message: formData.message,
-          to_name: 'Kirubaharan',
+          to_name: 'Kirubaharan'
         },
-        process.env.REACT_APP_EMAILJS_USER_ID || 'jgS7f_lbCiMslKY-r' // Use env variable
+        'jgS7f_lbCiMslKY-r'
       );
 
       console.log('Email sent successfully:', result);
+      
       toast({
         title: "Message Sent Successfully!",
         description: "Thank you for your message. I'll get back to you soon.",
       });
+      
       setFormData({ name: '', email: '', message: '' });
-    } catch (error: any) {
-      console.error('❌ Email sending error:', error.text || error.message || error);
+    } catch (error) {
+      console.error('❌ Email sending error:', error);
+      
       toast({
         title: "Failed to Send Message",
-        description: `Something went wrong: ${error.text || 'Unknown error'}. Please try again or contact me directly at kirubakrishkk@gmail.com.`,
+        description: "Something went wrong. Please try again or contact me directly.",
         variant: "destructive",
       });
     } finally {
@@ -100,7 +79,7 @@ const Contact = () => {
     {
       icon: MapPin,
       label: "Location",
-      value: "Sankarankovil, Tenkasi",
+      value: " Sankarankovil, Tenkasi",
       href: null
     }
   ];
@@ -184,7 +163,7 @@ const Contact = () => {
           <div className="bg-slate-900/50 p-8 rounded-xl border border-gray-700">
             <h3 className="text-2xl font-bold text-white mb-6">Send a Message</h3>
             
-            <form className="space-y-6">
+            <form onSubmit={handleSubmit} className="space-y-6">
               <div>
                 <label htmlFor="name" className="block text-gray-300 mb-2">
                   Your Name
@@ -235,7 +214,6 @@ const Contact = () => {
 
               <button
                 type="submit"
-                onClick={handleSubmit}
                 disabled={isSubmitting}
                 className="w-full flex items-center justify-center gap-3 px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-lg font-semibold hover:from-purple-600 hover:to-pink-600 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-300 hover:scale-105"
               >
