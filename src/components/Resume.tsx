@@ -61,14 +61,27 @@ const Resume = () => {
     "Problem Solving"
   ];
 
-  const handleDownload = () => {
+  const handleDownload = async () => {
+  const imageUrl = 'https://i.ibb.co/zkwGnBh/Kirubaharan-Resume-page-0001.jpg';
+
+  try {
+    const response = await fetch(imageUrl, { mode: 'cors' });
+    const blob = await response.blob();
+    const blobUrl = URL.createObjectURL(blob);
+
     const link = document.createElement('a');
-    link.href = 'https://i.ibb.co/zkwGnBh/Kirubaharan-Resume-page-0001.jpg';
-    link.download = 'Kirubaharan-Resume.jpg';
+    link.href = blobUrl;
+    link.download = 'Kirubaharan-Resume.jpg'; 
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
-  };
+    URL.revokeObjectURL(blobUrl); 
+  } catch (error) {
+    alert('Failed to download the resume. Please try again later.');
+    console.error(error);
+  }
+};
+
 
   const handleViewResume = () => {
     window.open('https://i.ibb.co/zkwGnBh/Kirubaharan-Resume-page-0001.jpg', '_blank');
