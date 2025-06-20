@@ -140,8 +140,8 @@ const Contact = () => {
               </p>
               <div className="flex gap-4">
                 <a
-                  href="public/Kirubaharan_Resume.pdf"
-                  download
+                  href="https://i.ibb.co/zkwGnBh/Kirubaharan-Resume-page-0001.jpg"
+                  download="Kirubaharan_Resume.jpg"
                   className="px-4 py-2 bg-purple-500 hover:bg-purple-600 text-white rounded-lg transition-colors duration-300"
                 >
                   Download Resume
