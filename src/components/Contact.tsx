@@ -79,7 +79,7 @@ const Contact = () => {
     {
       icon: MapPin,
       label: "Location",
-      value: "Pudhumarai, Sankarankovil, Tenkasi",
+      value: " Sankarankovil, Tenkasi",
       href: null
     }
   ];
@@ -140,7 +140,7 @@ const Contact = () => {
               </p>
               <div className="flex gap-4">
                 <a
-                  href="/Kirubaharan_Resume.pdf"
+                  href="public/Kirubaharan_Resume.pdf"
                   download
                   className="px-4 py-2 bg-purple-500 hover:bg-purple-600 text-white rounded-lg transition-colors duration-300"
                 >
