@@ -5,8 +5,8 @@ import { QrCode, X, ExternalLink } from 'lucide-react';
 const QRCodeComponent = () => {
   const [showQR, setShowQR] = useState(false);
 
-  // Generate QR code URL for the portfolio (you can replace with your actual domain)
-  const portfolioURL = window.location.origin;
+  // Updated to use your deployed GitHub Pages URL
+  const portfolioURL = 'https://kirubaharan181.github.io/kiruba-portfolio/';
   const qrCodeURL = `https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${encodeURIComponent(portfolioURL)}`;
 
   return (
