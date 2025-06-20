@@ -22,7 +22,7 @@ const Footer = () => {
     },
     {
       icon: Mail,
-      href: "mailto:kirubakrishkk@gmail.com",
+      href: "#contact",
       label: "Email",
       color: "hover:text-purple-400"
     }
@@ -157,14 +157,14 @@ const Footer = () => {
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             {/* Copyright */}
             <div className="flex items-center text-gray-400 text-sm">
-              <span>© 2024 Made with</span>
+              <span>© 2025 Made by</span>
               <Heart className="text-red-400 mx-1" size={16} />
-              <span>by Kirubaharan</span>
+              <span>Kirubaharan</span>
             </div>
 
             {/* Additional Info */}
             <div className="text-gray-400 text-sm text-center md:text-right">
-              <p>Built with React, TypeScript & Tailwind CSS</p>
+              <p></p>
             </div>
           </div>
         </div>
