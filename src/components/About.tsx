@@ -8,7 +8,7 @@ const About = () => {
 
   const funFacts = [
     { icon: Code, text: "Favorite Language: Java", color: "text-yellow-400", detail: "3+ years experience" },
-    { icon: Coffee, text: "Coffee Cups per Day: 3", color: "text-amber-400", detail: "Fuel for coding sessions" },
+    { icon: Coffee, text: "Solving Leetcode Problems", color: "text-amber-400", detail: "Fuel for coding sessions" },
     { icon: Book, text: "Research Focus: ML & NLP", color: "text-blue-400", detail: "Sentiment Analysis Expert" },
     { icon: Heart, text: "Passion: Data-Driven Solutions", color: "text-red-400", detail: "From data to insights" }
   ];
@@ -49,7 +49,7 @@ const About = () => {
   ];
 
   const personalInfo = {
-    location: "Pudhumarai, Sankarankovil, Tenkasi",
+    location: "Sankarankovil, Tenkasi",
     age: "21",
     education: "B.Tech Information Technology (2022-2026)",
     experience: "4+ years learning",
