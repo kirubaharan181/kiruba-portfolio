@@ -13,16 +13,14 @@ const Hero = () => {
 
   const roles = [
     "Aspiring Data Analyst",
-    "Tech Explorer", 
-    "Data Analytics Enthusiast",
+    "Tech Explorer",
     "Machine Learning Explorer",
-    "Software Developer",
-    "Problem Solver"
+    "Software Developer"
   ];
 
   const stats = [
     { number: "4+", label: "Major Projects", color: "text-purple-400", icon: Code },
-    { number: "4+", label: "Years Learning", color: "text-pink-400", icon: Star },
+    { number: "3+", label: "Years Learning", color: "text-pink-400", icon: Star },
     { number: "6+", label: "Certifications", color: "text-blue-400", icon: Award },
     { number: "95%", label: "Success Rate", color: "text-green-400", icon: Zap }
   ];
@@ -287,12 +285,13 @@ const Hero = () => {
 
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16">
             <a
-              href="/Kirubaharan_Resume.pdf"
-              download="Kirubaharan_Resume.pdf"
+              href="https://i.ibb.co/zkwGnBh/Kirubaharan-Resume-page-0001.jpg"
+              target="_blank"
+              rel="noopener noreferrer"
               className="group relative px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full font-semibold text-white overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-purple-500/25 flex items-center gap-3 w-full sm:w-auto justify-center"
             >
               <Download className="w-5 h-5 group-hover:animate-bounce" />
-              <span className="relative z-10">Download Resume</span>
+              <span className="relative z-10">View Resume</span>
             </a>
             
             <button
@@ -314,7 +313,7 @@ const Hero = () => {
 
           <div className="flex justify-center space-x-8 mb-32">
             {[
-              { name: 'PY', color: 'blue', fullName: 'Python' },
+              { name: 'Java', color: 'blue', fullName: 'Java' },
               { name: 'SQL', color: 'purple', fullName: 'SQL' },
               { name: 'ML', color: 'green', fullName: 'Machine Learning' }
             ].map((tech, index) => (
@@ -335,7 +334,7 @@ const Hero = () => {
           className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-purple-400 animate-bounce cursor-pointer hover:text-purple-300 transition-colors duration-300 group"
         >
           <div className="flex flex-col items-center">
-            <span className="text-sm mb-2 opacity-70 group-hover:opacity-100 transition-opacity">Scroll Down</span>
+            <span className="text-sm mb-2 opacity-70 group-hover:opacity-100 transition-opacity">Scroll Down😉</span>
             <div className="relative">
               <ArrowDown className="w-8 h-8 group-hover:animate-pulse" />
               <div className="absolute inset-0 bg-purple-400 rounded-full opacity-0 group-hover:opacity-20 group-hover:animate-ping"></div>
