@@ -15,11 +15,11 @@ const About = () => {
 
   const timeline = [
     {
-      year: "2026",
+      year: "2025",
       title: "B.Tech Graduate",
-      description: "Completing Information Technology degree with focus on ML and Data Analytics",
+      description: "Currently completing third year, stepping into final year with a strong foundation in core IT principles.",
       color: "border-purple-400",
-      details: ["GPA: 7.5/10", "Major Project on Sentiment Analysis", "Industry ready skills"],
+      details: ["GPA: 7.5/10", "Major Project on Sentiment Analysis", "Learning MERN Stack"],
       icon: Award
     },
     {
@@ -27,7 +27,7 @@ const About = () => {
       title: "Research & Development",
       description: "Working on Sentiment Analysis and Deep Learning Models for Twitter data",
       color: "border-pink-400",
-      details: ["AdamW optimizer research", "BERT model implementation", "NLP techniques mastery"],
+      details: ["AdamW optimizer research", "BERT model implementation", "NLP techniques"],
       icon: Code
     },
     {
@@ -35,7 +35,7 @@ const About = () => {
       title: "Wool Monitoring Application",
       description: "Developed E-commerce platform with Java-based tracking system",
       color: "border-blue-400",
-      details: ["SQLPlus database integration", "Inventory management", "Full-stack development"],
+      details: ["SQLPlus database integration", "Java application development", "Inventory management"],
       icon: Heart
     },
     {
@@ -43,7 +43,7 @@ const About = () => {
       title: "Started B.Tech",
       description: "Began Information Technology journey at Mepco Schlenk Engineering College",
       color: "border-green-400",
-      details: ["Programming fundamentals", "Data structures", "Algorithm design"],
+      details: ["Programming fundamentals", "Data structures", "Tech Learning"],
       icon: Calendar
     }
   ];
@@ -54,14 +54,14 @@ const About = () => {
     education: "B.Tech Information Technology (2022-2026)",
     experience: "4+ years learning",
     languages: ["English", "German (basic)", "Hindi (basic)", "Tamil"],
-    hobbies: ["Kabaddi", "Data Analysis", "Machine Learning", "Problem Solving"]
+    hobbies: ["Kabaddi", "Listening Music", "Swimming", "Travelling"]
   };
 
   const achievements = [
     { title: "National Level Technical Symposium", year: "2024", description: "Presented Sentiment Analysis research project" },
     { title: "Infosys Certifications", year: "2023-2024", description: "Java, Python, SQL, Agile Methodology" },
     { title: "High Academic Performance", year: "2022", description: "Higher Secondary: 92%, SSLC: 89%" },
-    { title: "District Level Kabaddi", year: "2023", description: "Participated showcasing teamwork and strategy" }
+    { title: "District Level Kabaddi", year: "2023", description: "Leading and showcasing teamwork and strategy" }
   ];
 
   return (
@@ -167,7 +167,7 @@ const About = () => {
                     <div className="flex items-center text-gray-300">
                       <Target className="w-5 h-5 text-purple-400 mr-3" />
                       <span className="font-medium">Goal:</span>
-                      <span className="ml-2">ML Engineer</span>
+                      <span className="ml-2">Data Analyst</span>
                     </div>
                   </div>
                   <div className="space-y-3">
@@ -280,7 +280,7 @@ const About = () => {
               />
               <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6">
                 <h3 className="text-2xl font-bold text-white mb-2">Kirubaharan</h3>
-                <p className="text-gray-300">IT Student & Aspiring Data Scientist</p>
+                <p className="text-gray-300">IT Student & Aspiring Data Analyst</p>
                 <p className="text-purple-400 text-sm mt-2">📍 Tenkasi, Tamil Nadu • 🎓 B.Tech IT (2022-2026)</p>
               </div>
             </div>
