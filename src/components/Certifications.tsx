@@ -92,7 +92,7 @@ const Certifications = () => {
                 <img
                   src={cert.image}
                   alt={cert.title}
-                  className="w-full h-auto object-contain aspect-[4/3] group-hover:scale-105 transition-transform duration-500"
+                  className="w-full h-auto object-cover group-hover:scale-110 transition-transform duration-500 md:h-48 lg:h-64"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent"></div>
                 <Award className="absolute top-3 right-3 text-yellow-400" size={24} />
