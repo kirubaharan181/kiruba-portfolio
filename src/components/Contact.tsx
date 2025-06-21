@@ -1,5 +1,5 @@
+
 import React, { useState } from 'react';
-import emailjs from 'emailjs-com';
 import { Mail, Phone, MapPin, Send } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
 
@@ -7,56 +7,59 @@ const Contact = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    message: ''
+    message: '',
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
 
   const handleSubmit = async (e: React.FormEvent) => {
-  e.preventDefault();
-  setIsSubmitting(true);
+    e.preventDefault();
+    setIsSubmitting(true);
 
-  try {
-    const result = await emailjs.send(
-      'service_3wkx0wp',
-      'template_pj3gv7l',
-      {
-        from_name: formData.name,
-        from_email: formData.email,
-        message: formData.message,
-        to_name: 'Kirubaharan',
-        to_email: 'kirubakrishkk@gmail.com',
-        reply_to: formData.email,
-        subject: `Portfolio Contact from ${formData.name}`
-      },
-      'jgS7f_lbCiMslKY-r' 
-    );
+    try {
+      const response = await fetch('https://formspree.io/f/xyzjdlwz', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json',
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          message: formData.message,
+          _subject: `Portfolio Contact from ${formData.name}`,
+          _replyto: formData.email,
+        }),
+      });
 
-    console.log('Email sent successfully:', result.text);
-    
-    toast({
-      title: "Message Sent Successfully!",
-      description: "Thank you for your message. I'll get back to you soon.",
-    });
-    
-    setFormData({ name: '', email: '', message: '' });
-  } catch (error: any) {
-    console.error('Email sending error:', error.text || error);
-    
-    toast({
-      title: "Failed to Send Message",
-      description: "Something went wrong. Please verify your EmailJS configuration or contact me directly.",
-      variant: "destructive",
-    });
-  } finally {
-    setIsSubmitting(false);
-  }
-};
+      const result = await response.json();
+
+      if (response.ok) {
+        console.log('Form submitted successfully:', result);
+        toast({
+          title: 'Message Sent Successfully!',
+          description: "Thank you for your message. I'll get back to you soon.",
+        });
+        setFormData({ name: '', email: '', message: '' });
+      } else {
+        throw new Error(result.error || 'Failed to send message');
+      }
+    } catch (error: any) {
+      console.error('Form submission error:', error.message || error);
+      toast({
+        title: 'Failed to Send Message',
+        description: 'Something went wrong. Please try again or contact me directly.',
+        variant: 'destructive',
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value,
     });
   };
 
