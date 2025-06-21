@@ -20,17 +20,20 @@ const Contact = () => {
     try {
       console.log('Sending email with data:', formData);
       
+      // Initialize EmailJS if not already done
+      emailjs.init('jgS7f_lbCiMslKY-r');
+      
       const result = await emailjs.send(
         'service_3wkx0wp',
         'template_pj3gv7l',
         {
-          to_email: 'kirubakrishkk@gmail.com',  // Recipient email
           from_name: formData.name,
           from_email: formData.email,
-          reply_to: formData.email,
-          subject: `Portfolio Contact from ${formData.name}`,
           message: formData.message,
-          to_name: 'Kirubaharan'
+          to_name: 'Kirubaharan',
+          to_email: 'kirubakrishkk@gmail.com',
+          reply_to: formData.email,
+          subject: `Portfolio Contact from ${formData.name}`
         },
         'jgS7f_lbCiMslKY-r'
       );
