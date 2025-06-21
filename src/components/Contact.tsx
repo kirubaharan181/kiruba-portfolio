@@ -1,85 +1,47 @@
-
-import React, { useState } from 'react';
-import emailjs from 'emailjs-com';
+import React from 'react';
 import { Mail, Phone, MapPin, Send } from 'lucide-react';
+import { useForm, ValidationError } from '@formspree/react';
 import { useToast } from '@/hooks/use-toast';
 
 const Contact = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: ''
-  });
-  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [state, handleSubmit] = useForm('xyzjdlwz'); // Replace 'xyzjdlwz' with your Formspree form ID
   const { toast } = useToast();
 
-  const handleSubmit = async (e: React.FormEvent) => {
-  e.preventDefault();
-  setIsSubmitting(true);
-
-  try {
-    const result = await emailjs.send(
-      'service_3wkx0wp',
-      'template_pj3gv7l',
-      {
-        from_name: formData.name,
-        from_email: formData.email,
-        message: formData.message,
-        to_name: 'Kirubaharan',
-        to_email: 'kirubakrishkk@gmail.com',
-        reply_to: formData.email,
-        subject: `Portfolio Contact from ${formData.name}`
-      },
-      'jgS7f_lbCiMslKY-r' 
-    );
-
-    console.log('Email sent successfully:', result.text);
-    
-    toast({
-      title: "Message Sent Successfully!",
-      description: "Thank you for your message. I'll get back to you soon.",
-    });
-    
-    setFormData({ name: '', email: '', message: '' });
-  } catch (error: any) {
-    console.error('Email sending error:', error.text || error);
-    
-    toast({
-      title: "Failed to Send Message",
-      description: "Something went wrong. Please verify your EmailJS configuration or contact me directly.",
-      variant: "destructive",
-    });
-  } finally {
-    setIsSubmitting(false);
-  }
-};
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    });
-  };
+  // Show toast on successful submission
+  React.useEffect(() => {
+    if (state.succeeded) {
+      toast({
+        title: 'Message Sent Successfully!',
+        description: "Thank you for your message. I'll get back to you soon.",
+      });
+    } else if (state.errors && state.errors.length > 0) {
+      toast({
+        title: 'Failed to Send Message',
+        description: 'Please check the form for errors and try again.',
+        variant: 'destructive',
+      });
+    }
+  }, [state.succeeded, state.errors, toast]);
 
   const contactInfo = [
     {
       icon: Mail,
-      label: "Email",
-      value: "kirubakrishkk@gmail.com",
-      href: "mailto:kirubakrishkk@gmail.com"
+      label: 'Email',
+      value: 'kirubakrishkk@gmail.com',
+      href: 'mailto:kirubakrishkk@gmail.com',
     },
     {
       icon: Phone,
-      label: "Phone",
-      value: "+91 9080257155",
-      href: "tel:+919080257155"
+      label: 'Phone',
+      value: '+91 9080257155',
+      href: 'tel:+919080257155',
     },
     {
       icon: MapPin,
-      label: "Location",
-      value: " Sankarankovil, Tenkasi",
-      href: null
-    }
+      label: 'Location',
+      value: 'Sankarankovil, Tenkasi',
+      href: null,
+    },
   ];
 
   return (
@@ -170,12 +132,11 @@ const Contact = () => {
                   type="text"
                   id="name"
                   name="name"
-                  value={formData.name}
-                  onChange={handleChange}
                   required
                   className="w-full px-4 py-3 bg-slate-800 border border-gray-600 rounded-lg text-white focus:border-purple-400 focus:outline-none transition-colors duration-300"
                   placeholder="Enter your name"
                 />
+                <ValidationError prefix="Name" field="name" errors={state.errors} />
               </div>
 
               <div>
@@ -186,12 +147,11 @@ const Contact = () => {
                   type="email"
                   id="email"
                   name="email"
-                  value={formData.email}
-                  onChange={handleChange}
                   required
                   className="w-full px-4 py-3 bg-slate-800 border border-gray-600 rounded-lg text-white focus:border-purple-400 focus:outline-none transition-colors duration-300"
                   placeholder="Enter your email"
                 />
+                <ValidationError prefix="Email" field="email" errors={state.errors} />
               </div>
 
               <div>
@@ -201,21 +161,20 @@ const Contact = () => {
                 <textarea
                   id="message"
                   name="message"
-                  value={formData.message}
-                  onChange={handleChange}
                   required
                   rows={5}
                   className="w-full px-4 py-3 bg-slate-800 border border-gray-600 rounded-lg text-white focus:border-purple-400 focus:outline-none transition-colors duration-300 resize-none"
                   placeholder="Tell me about your project or research collaboration!"
                 />
+                <ValidationError prefix="Message" field="message" errors={state.errors} />
               </div>
 
               <button
                 type="submit"
-                disabled={isSubmitting}
+                disabled={state.submitting}
                 className="w-full flex items-center justify-center gap-3 px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-lg font-semibold hover:from-purple-600 hover:to-pink-600 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-300 hover:scale-105"
               >
-                {isSubmitting ? (
+                {state.submitting ? (
                   <>
                     <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin"></div>
                     Sending...
