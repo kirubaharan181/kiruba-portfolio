@@ -29,9 +29,9 @@ const Certifications = () => {
     {
       id: 3,
       title: "LeetCode Practice in Java",
-      issuer: "LeetCode https://leetcode.com/kirubaharan1/",
+      issuer: "LeetCode❤️‍🔥=> https://leetcode.com/kirubaharan1/",
       date: "2025",
-      image: "https://i.ibb.co/Hfc24Csv/leetcode.png",
+      image: "https://i.ibb.co/fd3VQPX5/image-1.jpg",
       description: "Solved 100+ LeetCode problems in Java, focusing on arrays, strings, hash maps, recursion, and dynamic programming. Gained strong skills in clean coding, logical thinking, debugging through consistent practice.",
       skills: ["Problem Solving", "Logical Thinking", "Dynamic Programming", "Backtracking", "Sorting"],
       credentialUrl: "https://i.ibb.co/4D61Xxv/leetcode.png"
