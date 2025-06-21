@@ -14,50 +14,45 @@ const Contact = () => {
   const { toast } = useToast();
 
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
+  e.preventDefault();
+  setIsSubmitting(true);
 
-    try {
-      console.log('Sending email with data:', formData);
-      
-      // Initialize EmailJS if not already done
-      emailjs.init('jgS7f_lbCiMslKY-r');
-      
-      const result = await emailjs.send(
-        'service_3wkx0wp',
-        'template_pj3gv7l',
-        {
-          from_name: formData.name,
-          from_email: formData.email,
-          message: formData.message,
-          to_name: 'Kirubaharan',
-          to_email: 'kirubakrishkk@gmail.com',
-          reply_to: formData.email,
-          subject: `Portfolio Contact from ${formData.name}`
-        },
-        'jgS7f_lbCiMslKY-r'
-      );
+  try {
+    const result = await emailjs.send(
+      'service_3wkx0wp',
+      'template_pj3gv7l',
+      {
+        from_name: formData.name,
+        from_email: formData.email,
+        message: formData.message,
+        to_name: 'Kirubaharan',
+        to_email: 'kirubakrishkk@gmail.com',
+        reply_to: formData.email,
+        subject: `Portfolio Contact from ${formData.name}`
+      },
+      'jgS7f_lbCiMslKY-r' 
+    );
 
-      console.log('Email sent successfully:', result);
-      
-      toast({
-        title: "Message Sent Successfully!",
-        description: "Thank you for your message. I'll get back to you soon.",
-      });
-      
-      setFormData({ name: '', email: '', message: '' });
-    } catch (error) {
-      console.error('❌ Email sending error:', error);
-      
-      toast({
-        title: "Failed to Send Message",
-        description: "Something went wrong. Please try again or contact me directly.",
-        variant: "destructive",
-      });
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
+    console.log('Email sent successfully:', result.text);
+    
+    toast({
+      title: "Message Sent Successfully!",
+      description: "Thank you for your message. I'll get back to you soon.",
+    });
+    
+    setFormData({ name: '', email: '', message: '' });
+  } catch (error: any) {
+    console.error('Email sending error:', error.text || error);
+    
+    toast({
+      title: "Failed to Send Message",
+      description: "Something went wrong. Please verify your EmailJS configuration or contact me directly.",
+      variant: "destructive",
+    });
+  } finally {
+    setIsSubmitting(false);
+  }
+};
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({
