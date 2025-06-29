@@ -140,7 +140,7 @@ const Contact = () => {
               </p>
               <div className="flex gap-4">
                 <a
-                  href="https://i.ibb.co/zkwGnBh/Kirubaharan-Resume-page-0001.jpg"
+                  href="https://i.ibb.co/YFx6c0mP/Kiruba-res1-page-0001.jpg"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="px-4 py-2 bg-purple-500 hover:bg-purple-600 text-white rounded-lg transition-colors duration-300"
@@ -148,7 +148,7 @@ const Contact = () => {
                   View Resume
                 </a>
                 <a
-                  href="https://www.linkedin.com/in/kiruba-haran-7369a0320"
+                  href="https://www.linkedin.com/in/kirubaharan181"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="px-4 py-2 bg-slate-700 hover:bg-slate-600 text-white rounded-lg transition-colors duration-300"
