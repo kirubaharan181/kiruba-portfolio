@@ -105,7 +105,7 @@ const Header = () => {
                className="text-gray-300 hover:text-purple-400 transition-colors duration-300">
               <Github size={20} />
             </a>
-            <a href="https://www.linkedin.com/in/kiruba-haran-7369a0320" target="_blank" rel="noopener noreferrer"
+            <a href="https://www.linkedin.com/in/kirubaharan181" target="_blank" rel="noopener noreferrer"
                className="text-gray-300 hover:text-purple-400 transition-colors duration-300">
               <Linkedin size={20} />
             </a>
@@ -158,7 +158,7 @@ const Header = () => {
                      className="text-gray-300 hover:text-purple-400 transition-colors duration-300">
                     <Github size={20} />
                   </a>
-                  <a href="https://www.linkedin.com/in/kiruba-haran-7369a0320" target="_blank" rel="noopener noreferrer"
+                  <a href="https://www.linkedin.com/in/kirubaharan181" target="_blank" rel="noopener noreferrer"
                      className="text-gray-300 hover:text-purple-400 transition-colors duration-300">
                     <Linkedin size={20} />
                   </a>
