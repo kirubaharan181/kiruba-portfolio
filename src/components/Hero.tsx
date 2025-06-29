@@ -27,7 +27,7 @@ const Hero = () => {
 
   const socialLinks = [
     { icon: Github, href: "https://github.com/kirubaharan181", label: "GitHub", color: "hover:text-gray-300" },
-    { icon: Linkedin, href: "https://www.linkedin.com/in/kiruba-haran-7369a0320", label: "LinkedIn", color: "hover:text-blue-400" },
+    { icon: Linkedin, href: "https://www.linkedin.com/in/kirubaharan181", label: "LinkedIn", color: "hover:text-blue-400" },
     { icon: Mail, href: "#contact", label: "Email", color: "hover:text-purple-400" }
   ];
 
@@ -285,7 +285,7 @@ const Hero = () => {
 
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16">
             <a
-              href="https://i.ibb.co/zkwGnBh/Kirubaharan-Resume-page-0001.jpg"
+              href="https://i.ibb.co/YFx6c0mP/Kiruba-res1-page-0001.jpg"
               target="_blank"
               rel="noopener noreferrer"
               className="group relative px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full font-semibold text-white overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-purple-500/25 flex items-center gap-3 w-full sm:w-auto justify-center"
