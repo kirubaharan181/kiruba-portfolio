@@ -1,7 +1,6 @@
-
 import React, { useState, useEffect } from 'react';
 import Header from '../components/Header';
-import Hero from '../components/Hero';
+import Hero3D from '../components/Hero3D';
 import About from '../components/About';
 import Skills from '../components/Skills';
 import Projects from '../components/Projects';
@@ -57,7 +56,7 @@ const Index = () => {
     <div className={`min-h-screen bg-gradient-to-br ${getThemeClasses()} transition-all duration-500`}>
       <Preloader />
       <Header />
-      <Hero />
+      <Hero3D />
       <About />
       <Skills />
       <Projects />
