@@ -62,7 +62,7 @@ const Resume = () => {
   ];
 
   const handleDownload = async () => {
-  const imageUrl = 'https://i.ibb.co/YFx6c0mP/Kiruba-res1-page-0001.jpg';
+  const imageUrl = 'https://i.ibb.co/gbrXFGXw/Screenshot-2025-07-28-131044.png';
 
   try {
     const response = await fetch(imageUrl, { mode: 'cors' });
@@ -84,7 +84,7 @@ const Resume = () => {
 
 
   const handleViewResume = () => {
-    window.open('https://i.ibb.co/YFx6c0mP/Kiruba-res1-page-0001.jpg', '_blank');
+    window.open('https://i.ibb.co/gbrXFGXw/Screenshot-2025-07-28-131044.png', '_blank');
   };
 
   return (
