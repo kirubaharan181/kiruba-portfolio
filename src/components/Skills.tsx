@@ -20,7 +20,7 @@ const Skills = () => {
       title: "Web Development",
       skills: [
         { name: "HTML/CSS", level: 85, color: "from-orange-400 to-red-500" },
-        { name: "React", level: 80, color: "from-blue-400 to-blue-600" },
+        { name: "React", level: 70, color: "from-blue-400 to-blue-600" },
         { name: "Express.js", level: 75, color: "from-green-400 to-green-600" },
         { name: "MongoDB", level: 70, color: "from-emerald-400 to-emerald-600" },
         { name: "MERN Stack", level: 80, color: "from-indigo-400 to-indigo-600" }
@@ -30,8 +30,7 @@ const Skills = () => {
       title: "Tools & Technologies",
       skills: [
         { name: "Power BI", level: 75, color: "from-yellow-400 to-orange-500" },
-        { name: "Data Structures", level: 85, color: "from-gray-400 to-gray-600" },
-        { name: "Algorithms", level: 80, color: "from-violet-400 to-violet-600" },
+        { name: "Data Structures", level: 85, color: "from-violet-400 to-violet-600" },
         { name: "SQLPlus", level: 80, color: "from-blue-500 to-purple-500" },
         { name: "Machine Learning", level: 75, color: "from-red-400 to-red-600" },
         { name: "Agile Methodology", level: 75, color: "from-teal-400 to-teal-600" }
