@@ -140,7 +140,7 @@ const Contact = () => {
               </p>
               <div className="flex gap-4">
                 <a
-                  href="https://i.ibb.co/YFx6c0mP/Kiruba-res1-page-0001.jpg"
+                  href="https://i.ibb.co/gbrXFGXw/Screenshot-2025-07-28-131044.png"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="px-4 py-2 bg-purple-500 hover:bg-purple-600 text-white rounded-lg transition-colors duration-300"
