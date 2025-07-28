@@ -285,7 +285,7 @@ const Hero = () => {
 
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16">
             <a
-              href="https://i.ibb.co/YFx6c0mP/Kiruba-res1-page-0001.jpg"
+              href="https://i.ibb.co/gbrXFGXw/Screenshot-2025-07-28-131044.png"
               target="_blank"
               rel="noopener noreferrer"
               className="group relative px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full font-semibold text-white overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-purple-500/25 flex items-center gap-3 w-full sm:w-auto justify-center"
