@@ -4,6 +4,8 @@ import Header from '../components/Header';
 import Hero from '../components/Hero';
 import About from '../components/About';
 import Skills from '../components/Skills';
+import AITools from '../components/AITools';
+import DevTools from '../components/DevTools';
 import Projects from '../components/Projects';
 import Resume from '../components/Resume';
 import Certifications from '../components/Certifications';
@@ -61,6 +63,8 @@ const Index = () => {
       <About />
       <Skills />
       <Projects />
+      <AITools />
+      <DevTools />
       <Resume />
       <Certifications />
       <Contact />
